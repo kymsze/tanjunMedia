@@ -1,7 +1,11 @@
-# frozen_string_literal: true
-# A sample Gemfile
 source "https://rubygems.org"
 
-gem 'rack', '~> 2.0', '>= 2.0.1'
+gem 'rack', '= 1.6.4'
 gem 'sinatra'
-gem "thin"
+gem 'sinatra-reloader'
+gem 'thin'
+gem 'sprockets'
+gem 'haml'
+gem 'less'
+gem 'coffee-script'
+gem 'pry'
