@@ -23,31 +23,37 @@
             %img.svg.youtube(src='/assets/img/youtube-logo.svg')
 
     .header
-      #navbar
-      .stickynav.navmenu#pin1
-        %ul.nav#nav-half-one
-          %li Our work
-          %li Who we are
-          %li What we deliver
+      #sticky-hero.hero
+        .reel
+          %h1#play-btn
+            play
 
-        %ul.nav#nav-half-two
-          %li Who we work with
-          %li The brains
-          %li Get in touch
+      #hero-gradient
+        .navigation
+          #navbar
+          .stickynav.navmenu
+            %ul.nav#nav-half-one
+              %li Who we are
+              %li What we deliver
 
-      .stickynav.navlogo#pin2
-        %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
+            %ul.nav#nav-half-two
+              %li Who we work with
+              %li Get in touch
 
+          .stickynav.navlogo#main_nav_pin
+            %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
 
+      #hero-footer.hero-footer
+        .wrap
+          .triangle.triangle-up.triangle-right
+            .triangle-after.triangle-up-after.triangle-right-after
+          .triangle.triangle-up.triangle-left
+            .triangle-after.triangle-up-after.triangle-left-after
+          .buffer#hero_footer_pin
 
     .row
-      .twelve.columns.hero#sticky-hero
-        #hero-gradient
-      .reel
-        %h1.play-btn
-          play
 
-    .row#social-pink#pin3
+    .row#social-pink
       .twelve.columns.intro
         Hi
 
