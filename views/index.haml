@@ -6,60 +6,72 @@
     %link{href: '/assets/application.css', rel: "stylesheet"}/
 
   %body
+    #fullpage
 
-    .social
-      %ul
-        %li
-          %a
-            %img.svg.facebook(src='/assets/img/facebook-logo.svg')
-        %li
-          %a
-            %img.svg.twitter(src='/assets/img/twitter-logo.svg')
-        %li
-          %a
-            %img.svg.vimeo(src='/assets/img/vimeo-square-logo.svg')
-        %li
-          %a
-            %img.svg.youtube(src='/assets/img/youtube-logo.svg')
-
-    .header
-      #sticky-hero.hero
-        .reel
-          %h1#play-btn
-            play
-
-      #hero-gradient
+      .section.section1
         .navigation
-          #navbar
-          .stickynav.navmenu
-            %ul.nav#nav-half-one
-              %li Who we are
-              %li What we deliver
+          %ul.nav
+            %li Who we are
+            %li What we deliver
 
-            %ul.nav#nav-half-two
-              %li Who we work with
-              %li Get in touch
+          %ul.nav
+            %li Who we work with
+            %li Get in touch
 
-          .stickynav.navlogo#main_nav_pin
-            %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
+        .navlogo
+          %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
 
-      #hero-footer.hero-footer
-        .wrap
+        .hero-footer
           .triangle.triangle-up.triangle-right
             .triangle-after.triangle-up-after.triangle-right-after
           .triangle.triangle-up.triangle-left
             .triangle-after.triangle-up-after.triangle-left-after
-          .buffer#hero_footer_pin
 
-    .row
 
-    .row#social-pink
-      .twelve.columns.intro
-        Hi
+      .section
+        HI2
+        / .header
+        /   #sticky-hero.hero
+        /     .reel
 
-    .row
-      .twelve.columns.intro
-        Hi
+        /       %video#bgvid{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :poster => "/assets/img/hero2.png"}
+        /         %source{:src => "/assets/img/hero.webm", :type => "video/webm"}
+        /         %source{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
+        /       %h1#play-btn
+        /         play
+
+
+      #social-pink.section
+        .row.sub-section
+          .ten.offset-by-one.columns
+            %h1
+              Who we are
+
+          .eight.offset-by-one.columns
+            %p
+              We are digital film content creators. We are not an agency, nor are we ex TV broadcasters.
+
+            %p
+              We are digital natives. We live and breathe social content. Our production serves the stories we tell and the creatives we execute, not the other way around.
+
+            %p
+              We aren't motivated by profit margins, industry awards or owning swanky Shoreditch offices, we just want to make great stuff and tell great stories and our results show that we are very good at doing just that.
+
+          .ten.offset-by-one.columns
+            %a.button
+              Get in touch
+
+      #whatsection.section
+        .row.sub-section
+          .twelve.columns
+            .bolt-one-divider
+              .ten.offset-by-one.columns
+                %h1
+                  What we create
+            .blue-block
+              .section-feature-image
+                %img(src='/assets/img/section-feature-image.png')
+
 
   %script{ src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
   %script{ src: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js' }
