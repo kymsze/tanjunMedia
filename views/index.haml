@@ -10,16 +10,21 @@
 
       .section.section1
         .navigation
-          %ul.nav
+          .navbg
+          %ul.nav#nav1
             %li Who we are
             %li What we deliver
 
-          %ul.nav
+          %ul.nav.navlogo
+            %li
+              %img(src='/assets/img/CombinationMarkV1Dark.png')
+
+          %ul.nav#nav2
             %li Who we work with
             %li Get in touch
 
-        .navlogo
-          %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
+        .logo
+          %img(src='/assets/img/CombinationMarkV1Dark.png')
 
         .hero-footer
           .triangle.triangle-up.triangle-right
@@ -29,16 +34,9 @@
 
 
       .section
-        HI2
-        / .header
-        /   #sticky-hero.hero
-        /     .reel
-
-        /       %video#bgvid{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :poster => "/assets/img/hero2.png"}
-        /         %source{:src => "/assets/img/hero.webm", :type => "video/webm"}
-        /         %source{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
-        /       %h1#play-btn
-        /         play
+        %video#vid{:autobuffer => "", :autoplay => "", :video => ""}
+          %source#webm{:src => "/assets/img/hero.webm", :type => "video/mp4"}
+          %source#mp4{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
 
 
       #social-pink.section
@@ -72,10 +70,5 @@
               .section-feature-image
                 %img(src='/assets/img/section-feature-image.png')
 
-
-  %script{ src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
-  %script{ src: '//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js' }
-  %script{ src: '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js' }
-  %script{ src: '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.debug.js' }
   %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js' }
   %script{ src: '/assets/application.js' }

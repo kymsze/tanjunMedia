@@ -1,71 +1,45 @@
 .section1
   background-color: $lightblue
 
-// .header
-//   position: relative
-//   height: 200vh
+html, body
+  width: 100%
+  height: 100%
+  overflow: hidden
 
-// .hero
-//   position: absolute
-//   height: 100vh
-//   width: 100%
+.section
+  overflow: hidden
 
-// #bgvid
-//   top: 0
-//   left: 0
-//   min-width: 100%
-//   min-height: 100%
-//   width: 100%
-//   height: auto
-//   z-index: -100
-//   background-size: cover
-//   background-position: center center
+#vid
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: -1000
+  overflow: hidden
 
+#bgvid
+  bottom: 0
+  left: 0
+  min-width: 100%
+  min-height: 100%
+  height: auto
+  background-size: cover
+  background-position: center center
 
-
-// #hero-gradient
-//   position: fixed
-//   top: 0
-//   right: 0
-//   bottom: 0
-//   left: 0
-//   background-color: rgba(37, 110, 255, 1)
-
-
-// .social
-//   position: fixed
-//   top: 7em
-//   right: 1em
-//   z-index: 3
-//   ul
-//     list-style: none
-//   li
-//     margin-bottom: 0
-
-// .reel
-//   height: 100vh
-//   z-index: 2
-//   overflow: hidden
-
-// #play-btn
-//   font-family: 'Feature'
-//   text-align: center
-//   padding-top: 45vh
-//   color: white
-
-
-
-
-.navlogo
+.logo
   top: 45vh
   width: 100%
   z-index: 2
   text-align: center
 
-
-#logo
-  width: 17em
-  margin-top: -5.5em
+  img
+    width: 17em
+    margin-top: -5.5em
 
 
 .hero-footer
@@ -75,7 +49,6 @@
   bottom: 0
 
 .navigation
-  background: $lightblue
   width: 100%
   height: 6em
   position: fixed
@@ -95,3 +68,21 @@
     font-family: 'Body'
     font-weight: bold
     font-size: 0.9em
+
+.navlogo
+  margin: 0
+  display: inline-block
+
+  img
+    width: 4.5em
+
+  li
+    padding: 0
+
+
+.pink-nav
+  li
+    color: $pink
+
+.hidden
+  opacity: 0
