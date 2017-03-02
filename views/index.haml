@@ -6,71 +6,69 @@
     %link{href: '/assets/application.css', rel: "stylesheet"}/
 
   %body
-    #fullpage
 
-      .section.section1
-        .navigation
-          %ul.nav
-            %li Who we are
-            %li What we deliver
+    #navbar
+      #hero-gradient
+      .navigation
+        %ul.nav
+          %li Who we are
+          %li What we deliver
 
-          %ul.nav
-            %li Who we work with
-            %li Get in touch
+        %ul.nav
+          %li Who we work with
+          %li Get in touch
 
-        .navlogo
-          %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
+      .navlogo
+        %img#logo(src='/assets/img/CombinationMarkV1Dark.png')
 
-        .hero-footer
-          .triangle.triangle-up.triangle-right
-            .triangle-after.triangle-up-after.triangle-right-after
-          .triangle.triangle-up.triangle-left
-            .triangle-after.triangle-up-after.triangle-left-after
-
-
-      .section
-        HI2
-        / .header
-        /   #sticky-hero.hero
-        /     .reel
-
-        /       %video#bgvid{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :poster => "/assets/img/hero2.png"}
-        /         %source{:src => "/assets/img/hero.webm", :type => "video/webm"}
-        /         %source{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
-        /       %h1#play-btn
-        /         play
+      .hero-footer
+        .triangle.triangle-up.triangle-right
+          .triangle-after.triangle-up-after.triangle-right-after
+        .triangle.triangle-up.triangle-left
+          .triangle-after.triangle-up-after.triangle-left-after
 
 
-      #social-pink.section
-        .row.sub-section
-          .ten.offset-by-one.columns
-            %h1
-              Who we are
+      .header
+        #sticky-hero.hero
+          .reel
 
-          .eight.offset-by-one.columns
-            %p
-              We are digital film content creators. We are not an agency, nor are we ex TV broadcasters.
+            %video#bgvid{:autoplay => "", :loop => "", :muted => "", :playsinline => "", :poster => "/assets/img/hero2.png"}
+              %source{:src => "/assets/img/hero.webm", :type => "video/webm"}
+              %source{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
+            %h1#play-btn
+              play
 
-            %p
-              We are digital natives. We live and breathe social content. Our production serves the stories we tell and the creatives we execute, not the other way around.
 
-            %p
-              We aren't motivated by profit margins, industry awards or owning swanky Shoreditch offices, we just want to make great stuff and tell great stories and our results show that we are very good at doing just that.
+    #social-pink
+      .row.sub-section
+        .ten.offset-by-one.columns
+          %h1
+            Who we are
 
-          .ten.offset-by-one.columns
-            %a.button
-              Get in touch
+        .eight.offset-by-one.columns
+          %p
+            We are digital film content creators. We are not an agency, nor are we ex TV broadcasters.
 
-      #whatsection.section
-        .row.sub-section
-          .twelve.columns
-            .bolt-one-divider
-              .ten.offset-by-one.columns
-                %h1
-                  What we create
-            .blue-block
-              .section-feature-image
-                %img(src='/assets/img/section-feature-image.png')
+          %p
+            We are digital natives. We live and breathe social content. Our production serves the stories we tell and the creatives we execute, not the other way around.
+
+          %p
+            We aren't motivated by profit margins, industry awards or owning swanky Shoreditch offices, we just want to make great stuff and tell great stories and our results show that we are very good at doing just that.
+
+        .ten.offset-by-one.columns
+          %a.button
+            Get in touch
+
+    #whatsection
+      .row.sub-section
+        .twelve.columns
+          .bolt-one-divider
+            .ten.offset-by-one.columns
+              %h1
+                What we create
+          .blue-block
+            .section-feature-image
+              %img(src='/assets/img/section-feature-image.png')
 
 
   %script{ src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' }
