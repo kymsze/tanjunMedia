@@ -3,6 +3,7 @@ $Video = $('video')
 $Nav1 = $('#nav1')
 $Nav2 = $('#nav2')
 $NavLogo = $('.navlogo')
+$PlayButton = $('.play-btn')
 
 
 $(document).ready ->
@@ -52,7 +53,6 @@ $('#fullpage').fullpage
       $Nav2.addClass('animated slideLeft')
 
     # # Nav colour
-
     if index == 1 and nextIndex == 2
       $Nav2.addClass('pink-nav')
       $Nav1.addClass('pink-nav')
@@ -70,7 +70,7 @@ $('#fullpage').fullpage
 
     if index == 2
       $NavLogo.removeClass 'hidden'
-
+      $PlayButton.addClass('animated tada')
       $Video.get(0).play()
 
     if index != 1
