@@ -5,6 +5,12 @@ $Nav2 = $('#nav2')
 $NavLogo = $('.navlogo')
 
 
+$(document).ready ->
+  $('.mobile-nav-link').click ->
+    $('#button').prop('checked', false)
+    return
+
+
 $('#fullpage').fullpage
   fixedElements: '.navigation, .hero-footer'
   anchors: [
@@ -77,3 +83,5 @@ $('#fullpage').fullpage
 
       return
     return
+
+

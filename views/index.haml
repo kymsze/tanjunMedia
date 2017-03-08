@@ -2,17 +2,32 @@
 %html
   %head
     %meta{content: "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
     %title Test Application
     %link{href: '/assets/application.css', rel: "stylesheet"}/
 
   %body
     #fullpage
 
-      .section.section1
-        .navi{ :role => "custom-dropdown"}
-          %input#button{:type => "checkbox"}/
-          %label{:for => "button", :onclick => ""}
+      .navigation{ :role => "custom-dropdown"}
+        %input#button{:type => "checkbox"}/
+        %label{:for => "button", :onclick => ""}
 
+        .mobile-nav
+          %ul.nav
+            %a.mobile-nav-link{:href => "#thirdPage/1"}
+              %li Who we are
+            %a.mobile-nav-link{:href => "#thirdPage/1"}
+              %li Who we are
+            %a.mobile-nav-link{:href => "#thirdPage/1"}
+              %li Who we are
+            %a.mobile-nav-link{:href => "#thirdPage/1"}
+              %li Who we are
+            %a.mobile-nav-link{:href => "#thirdPage/1"}
+              %li Who we are
+
+
+        .desktop-nav
           %ul.nav#nav1
             %li
               %a{:href => "#thirdPage/1"} Who we are
@@ -30,6 +45,7 @@
             %li
               %a{:href => "#fourthPage/1'"} Get in touch
 
+      .section.section1
         .logo
           %img(src='/assets/img/CombinationMarkV1Dark.png')
 

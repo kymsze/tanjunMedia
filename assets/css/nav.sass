@@ -1,27 +1,20 @@
-// *
-//   box-sizing: border-box
+.desktop-nav
+  display: block
 
-// body
-//   -webkit-animation: bugfix infinite 1s
+.mobile-nav
+  display: none
 
-// @-webkit-keyframes bugfix
-//   from
-//     padding: 0
+input[type=checkbox]
+  position: absolute
+  top: -9999px
+  left: -9999px
 
-//   to
-//     padding: 0
+label
+  display: none
+  cursor: pointer
+  user-select: none
 
-// input[type=checkbox]
-//   position: absolute
-//   top: -9999px
-//   left: -9999px
-
-// label
-//   display: none
-//   cursor: pointer
-//   user-select: none
-
-.navi
+.navigation
   width: 100%
   height: 6em
   position: fixed
@@ -55,55 +48,82 @@
     padding: 0
 
 
+label
+  background: none
+
 .pink-nav
   li
     a
       color: $pink
 
 
-// @media screen and (max-width: 44em)
-//   html, body
-//     margin: 0
+@media screen and (max-width: 44em)
 
-//   nav[role="custom-dropdown"]
-//     ul
-//       display: none
-//       height: 100%
 
-//     label
-//       position: relative
-//       display: block
-//       width: 100%
-//       min-height: 2.25em
-//       padding: .45em
-//       font-size: 1.1em
-//       margin: 0
-//       border: 0.15em solid rgba(60, 60, 60, 0.2)
+  html, body
+    margin: 0
 
-//       &:after
-//         position: absolute
-//         right: .25em
-//         top: 0
-//         content: "\2261"
-//         font-size: 1.8em
 
-//     input[type=checkbox]:checked ~
-//       label:after
-//         color: #222
+  .navigation[role="custom-dropdown"]
+    ul
+      display: none
+      height: 100%
 
-//       ul
-//         display: block
+    label
+      position: relative
+      display: block
+      width: 100%
+      min-height: 2.25em
+      padding: .45em
+      font-size: 1.1em
+      margin: 0
 
-//         > li
-//           width: 100%
-//           opacity: .8
-//           text-align: left
+      &:after
+        position: absolute
+        right: .25em
+        top: 0
+        content: "\2261"
+        font-size: 1.8em
+        color: $pink
 
-//           &:after
-//             position: absolute
-//             right: .25em
-//             content: "\203A"
-//             font: bold 1.4em sans-serif
+    input[type=checkbox]:checked ~
+      label
+        background: white
+      label:after
+        color: $pink
+
+      .desktop-nav
+        display: none
+
+      .mobile-nav
+        display: block
+
+        ul
+          background: white
+          display: block
+          margin: 0
+          max-width: 100%
+          position: relative
+
+          > a
+            width: 100%
+            color: $pink
+            font-family: 'BodyBold'
+            font-size: 0.9em
+            text-decoration: none
+
+            > li
+              background: white
+              width: 100%
+              text-align: left
+              margin-bottom: 0
+              padding-top: 1em
+              padding-bottom: 1em
+              border-top: 1.5px solid
+
+          > a:last-of-type
+            li
+              border-bottom: 1em solid
 
 
 

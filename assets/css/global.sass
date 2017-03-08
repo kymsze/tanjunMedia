@@ -1,6 +1,18 @@
+*
+  box-sizing: border-box
+
 body
+  -webkit-animation: bugfix infinite 1s
+  overflow: hidden
+  max-width: 100%
   width: 100%
-  overflow-x: hidden
+
+@-webkit-keyframes bugfix
+  from
+    padding: 0
+
+  to
+    padding: 0
 
 .triangle
   z-index: 10
