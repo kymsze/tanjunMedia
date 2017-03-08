@@ -9,10 +9,11 @@
     #fullpage
 
       .section.section1
-        .navigation
-          .navbg
-          %ul.nav#nav1
+        .navi{ :role => "custom-dropdown"}
+          %input#button{:type => "checkbox"}/
+          %label{:for => "button", :onclick => ""}
 
+          %ul.nav#nav1
             %li
               %a{:href => "#thirdPage/1"} Who we are
             %li
