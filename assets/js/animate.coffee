@@ -5,20 +5,21 @@ $Nav2 = $('#nav2')
 $NavLogo = $('.navlogo')
 
 
-
 $('#fullpage').fullpage
   fixedElements: '.navigation, .hero-footer'
+  anchors: [
+    'firstPage'
+    'secondPage'
+    'thirdPage'
+    'fourthPage'
+  ]
   onLeave: (index, nextIndex, direction) ->
 
-    # Play Video
-    if index == 1 and nextIndex == 2
-      $Video.get(0).play()
-
     # Fade footer
-    if index == 2 and nextIndex == 3
+    if index == 1 and nextIndex == 2
       $HeroFooter.addClass('animated fadeOutDown')
 
-    if index == 3 and nextIndex == 2
+    if index == 2 and nextIndex == 1
       $HeroFooter.removeClass 'animated fadeOutDown'
       $HeroFooter.addClass('animated fadeInUp')
 
@@ -46,13 +47,13 @@ $('#fullpage').fullpage
 
     # # Nav colour
 
-    # if index == 2 and nextIndex == 3
-    #   $Nav2.addClass('pink-nav')
-    #   $Nav1.addClass('pink-nav')
+    if index == 1 and nextIndex == 2
+      $Nav2.addClass('pink-nav')
+      $Nav1.addClass('pink-nav')
 
-    # if index == 3 and nextIndex == 2
-    #   $Nav2.removeClass('pink-nav')
-    #   $Nav1.removeClass('pink-nav')
+    if index == 2 and nextIndex == 1
+      $Nav2.removeClass('pink-nav')
+      $Nav1.removeClass('pink-nav')
 
       return
     return
@@ -63,6 +64,16 @@ $('#fullpage').fullpage
 
     if index == 2
       $NavLogo.removeClass 'hidden'
+
+      $Video.get(0).play()
+
+    if index != 1
+      $NavLogo.removeClass 'hidden'
+      $NavLogo.removeClass 'animated fadeOut'
+      $HeroFooter.addClass 'animated fadeOutDown'
+      $HeroFooter.addClass 'animated fadeOutDown'
+      $Nav2.addClass('pink-nav')
+      $Nav1.addClass('pink-nav')
 
       return
     return

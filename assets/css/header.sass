@@ -64,10 +64,12 @@ html, body
     display: inline-block
     float: left
     padding: 0.5em 1.5em
-    color: white
-    font-family: 'Body'
-    font-weight: bold
-    font-size: 0.9em
+    a
+      color: white
+      font-family: 'BodyBold'
+      font-weight: 900
+      font-size: 0.9em
+      text-decoration: none
 
 .navlogo
   margin: 0
@@ -82,7 +84,22 @@ html, body
 
 .pink-nav
   li
-    color: $pink
+    a
+      color: $pink
 
 .hidden
   opacity: 0
+
+.overlay
+  background: url("img/smaller-dot.png") repeat
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  overflow: hidden
+
