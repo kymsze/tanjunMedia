@@ -19,6 +19,11 @@ $('#fullpage').fullpage
     'secondPage'
     'thirdPage'
     'fourthPage'
+    'fithPage'
+    'sixthPage'
+    'seventhPage'
+    'eighthPage'
+    'ninthPage'
   ]
   onLeave: (index, nextIndex, direction) ->
 
@@ -72,6 +77,9 @@ $('#fullpage').fullpage
       $NavLogo.removeClass 'hidden'
       $PlayButton.addClass('animated tada')
       $Video.get(0).play()
+
+    if index != 2
+      $PlayButton.removeClass('animated tada')
 
     if index != 1
       $NavLogo.removeClass 'hidden'

@@ -9,103 +9,13 @@
   %body
     #fullpage
 
-      .navigation{ :role => "custom-dropdown"}
-        %input#button{:type => "checkbox"}/
-        %label{:for => "button", :onclick => ""}
+      = haml :navigation
+      = haml :hero
+      = haml :reel
+      = haml :about
+      = haml :work
+      = haml :contact
 
-        .mobile-nav
-          %ul.nav
-            %a.mobile-nav-link{:href => "#thirdPage/1"}
-              %li Who we are
-            %a.mobile-nav-link{:href => "#thirdPage/1"}
-              %li Who we are
-            %a.mobile-nav-link{:href => "#thirdPage/1"}
-              %li Who we are
-            %a.mobile-nav-link{:href => "#thirdPage/1"}
-              %li Who we are
-            %a.mobile-nav-link{:href => "#thirdPage/1"}
-              %li Who we are
-
-
-        .desktop-nav
-          %ul.nav#nav1
-            %li
-              %a{:href => "#thirdPage/1"} Who we are
-            %li
-              %a{:href => "#fourthPage/1'"} What we deliver
-
-          %ul.nav.navlogo
-            %li
-              %a{:href => "#secondPage/1"}
-                %img(src='/assets/img/CombinationMarkV1Dark.png')
-
-          %ul.nav#nav2
-            %li
-              %a{:href => "#thirdPage/1"} Who we work with
-            %li
-              %a{:href => "#fourthPage/1'"} Get in touch
-
-      .section.section1
-        .logo
-          %img(src='/assets/img/CombinationMarkV1Dark.png')
-
-        .hero-footer
-          .triangle.triangle-up.triangle-right
-            .triangle-after.triangle-up-after.triangle-right-after
-          .triangle.triangle-up.triangle-left
-            .triangle-after.triangle-up-after.triangle-left-after
-
-      .section
-        %a.play-btn{ :href => "#" }
-          %p Play
-
-        .overlay
-        %video#vid{:autobuffer => "", :autoplay => "", :video => ""}
-          %source#webm{:src => "/assets/img/hero.webm", :type => "video/mp4"}
-          %source#mp4{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
-
-
-      #social-pink.section
-        .row.sub-section
-          .ten.offset-by-one.columns
-            %h1
-              Who we are
-
-          .eight.offset-by-one.columns
-            %p
-              We are digital film content creators. We are not an agency, nor are we ex TV broadcasters.
-
-            %p
-              We are digital natives. We live and breathe social content. Our production serves the stories we tell and the creatives we execute, not the other way around.
-
-            %p
-              We aren't motivated by profit margins, industry awards or owning swanky Shoreditch offices, we just want to make great stuff and tell great stories and our results show that we are very good at doing just that.
-
-          .ten.offset-by-one.columns
-            %a.button
-              Get in touch
-
-      #whatsection.section
-        .row.sub-section
-          .twelve.columns
-            .bolt-one-divider.divider-top
-              .ten.offset-by-one.columns
-                %h1
-                  What we create
-            .blue-block
-              .section-feature-image
-                %img(src='/assets/img/section-feature-image.png')
-            .bolt-one-divider.divider-flip
-      #whatsection.section
-        .blue-block
-          .section-feature-image
-            %img(src='/assets/img/section-feature-image.png')
-        .bolt-one-divider.divider-flip
-      #whatsection.section
-        .blue-block
-          .section-feature-image
-            %img(src='/assets/img/section-feature-image.png')
-        .bolt-one-divider.divider-flip
 
   %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js' }
   %script{ src: '/assets/application.js' }
