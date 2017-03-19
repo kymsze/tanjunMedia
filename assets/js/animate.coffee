@@ -11,7 +11,7 @@ ScreenBigEnough = (width, height) ->
     true
   else if width >= 700 and height <= 640
     false
-  else if width <= 700 and height <= 600
+  else if width <= 700 and height <= 560
     false
   else
     true
@@ -24,6 +24,7 @@ $(document).ready ->
 
 if ScreenBigEnough $(window).width(), $(window).height()
   $('html').removeClass('fullpage-false')
+  $('.section').removeAttr('id');
   $('#fullpage').fullpage
     fixedElements: '.navigation, .hero-footer'
     anchors: [
