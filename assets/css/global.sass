@@ -1,6 +1,15 @@
 *
   box-sizing: border-box
 
+.row
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 4%
+
+.wide-row
+  max-width: none
+  padding: 0
+
 body
   -webkit-animation: bugfix infinite 1s
   overflow: hidden
@@ -59,19 +68,31 @@ body
   path
     fill: white
 
-.play-btn
-  position: absolute
-  width: 100%
-  top: 35vh
-  z-index: 10
-  text-align: center
-  text-decoration: none
-  p
-    font-family: 'Feature'
-    font-size: 6em
-    color: white
-
 \:focus
   outline: 0
   outline: none
 
+a
+  text-decoration: none
+
+.header
+  display: block
+
+.mobile-header
+  display: none
+  color: $pink
+  height: 9vh
+  h1
+    padding: 0.45em 4%
+
+
+@media (max-width: 700px)
+
+  .header
+    display: none
+
+  .mobile-header
+    display: block
+
+  .bolt-one-divider
+    display: none

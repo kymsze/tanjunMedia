@@ -10,6 +10,6 @@ get '/' do
 end
 
 get '/work/:name' do
-  haml :"work/#{params['name']}"
+  haml :"case-studies/#{params['name']}"
 end
 

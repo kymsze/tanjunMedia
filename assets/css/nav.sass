@@ -32,10 +32,6 @@ label
     padding: 0.5em 1.5em
     a
       color: white
-      font-family: 'BodyBold'
-      font-weight: 900
-      font-size: 0.9em
-      text-decoration: none
 
 .navlogo
   margin: 0
@@ -57,8 +53,10 @@ label
       color: $pink
 
 
-@media screen and (max-width: 44em)
+@media screen and (max-width: 700px)
 
+  .navigation
+    height: 3em
 
   html, body
     margin: 0
@@ -84,7 +82,7 @@ label
         top: 0
         content: "\2261"
         font-size: 1.8em
-        color: $pink
+        color: $blue
 
     input[type=checkbox]:checked ~
       label
