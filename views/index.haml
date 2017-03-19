@@ -1,5 +1,5 @@
 !!!
-%html
+%html.fullpage-false
   %head
     %meta{content: "text/html; charset=utf-8", "http-equiv" => "content-type"}/
     %meta{:content => "width=device-width", :name => "viewport"}/
@@ -7,7 +7,7 @@
     %link{href: '/assets/application.css', rel: "stylesheet"}/
 
   %body
-    #fullpage.false
+    #fullpage
 
       = haml :navigation
       = haml :hero

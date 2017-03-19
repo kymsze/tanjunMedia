@@ -23,7 +23,7 @@ $(document).ready ->
   return
 
 if ScreenBigEnough $(window).width(), $(window).height()
-  $('#fullpage').removeClass('false')
+  $('html').removeClass('fullpage-false')
   $('#fullpage').fullpage
     fixedElements: '.navigation, .hero-footer'
     anchors: [
