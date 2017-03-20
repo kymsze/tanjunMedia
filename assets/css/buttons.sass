@@ -1,12 +1,32 @@
 .button
-  margin: 3em auto
-  width: 20em
+  margin: 0
+  width: 100%
+  max-width: 20em
   display: block
   color: white
-  background: $blue
-  border-radius: 0.1em
+  background: $lightblue
+  border-radius: 0.25em
   border: none
+  padding: 0.5em
+  height: auto
+
+.button-center
+  margin: 3em auto
 
 .button:hover
   color: white
-  background: $lightblue
+  background: $blue
+
+.blue-block
+  .button
+    background: white
+    color: $lightblue
+
+  .button:hover
+    background: white
+    color: $lightblue
+
+
+@media (max-width: 1300px)
+  .button
+    padding: 0.15em

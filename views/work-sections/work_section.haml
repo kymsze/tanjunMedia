@@ -1,0 +1,25 @@
+.section#fourthPage
+  .sub-section
+    - if header == true
+      .row.wide-row
+        .twelve.columns.section-colums
+          .bolt-one-divider.divider-top
+            .row
+              .ten.columns
+                %h1.header
+                  What we create
+          .mobile-header.blue-bg
+            %h1
+              What we create
+    - if header == true
+      .blue-block.blue-block-small
+        = haml :'work-sections/work_block'
+    - else
+      .blue-block.blue-block-long
+        = haml :'work-sections/work_block'
+
+    - if header == false
+      .row.wide-row
+        .twelve.columns.section-colums
+          .bolt-one-divider.divider-flip
+            .ten.offset-by-one.columns

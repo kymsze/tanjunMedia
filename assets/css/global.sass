@@ -1,6 +1,27 @@
+*
+  box-sizing: border-box
+
+.row
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 4%
+
+.wide-row
+  max-width: none
+  padding: 0
+
 body
+  -webkit-animation: bugfix infinite 1s
+  overflow: hidden
+  max-width: 100%
   width: 100%
-  overflow-x: hidden
+
+@-webkit-keyframes bugfix
+  from
+    padding: 0
+
+  to
+    padding: 0
 
 .triangle
   z-index: 10
@@ -41,10 +62,37 @@ body
   width: 100%
   padding-left: 50%
 
-
 .svg
   width: 1.5em
   height: 1.5em
   path
     fill: white
 
+\:focus
+  outline: 0
+  outline: none
+
+a
+  text-decoration: none
+
+.header
+  display: block
+
+.mobile-header
+  display: none
+  color: $pink
+  height: 9vh
+  h1
+    padding: 0.45em 4%
+
+
+@media (max-width: 700px)
+
+  .header
+    display: none
+
+  .mobile-header
+    display: block
+
+  .bolt-one-divider
+    display: none

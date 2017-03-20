@@ -1,10 +1,24 @@
-.sub-section
-  height: 100vh
+// BOLT DIVIDER //
 
-#social-pink
-  color: $pink
-  h1
-    padding-top: 4em
+.divider-top
+  margin-top: 10em
+
+@media (max-width: 1500px)
+
+  .divider-top
+    margin-top: 6em
+
+@media (max-width: 1300px)
+
+  .divider-top
+    margin-top: 4em
+
+.divider-flip
+  -webkit-transform: rotate(180deg)
+  -moz-transform: rotate(180deg)
+  -ms-transform: rotate(180deg)
+  -o-transform: rotate(180deg)
+  transform: rotate(180deg)
 
 .bolt-one-divider
   background: url("img/bolt1.png") no-repeat center
@@ -12,13 +26,158 @@
   width: 100%
   height: 10em
 
-.blue-block
-  background: $blue
+  h1
+    color: $blue
+    padding: 0
+    padding-top: 1em
 
-.section-feature-image
+.divider-pink
+  background: url("img/bolt2.png") no-repeat center
+  background-size: 100% 10em
+
+  h1
+    color: $pink
+
+
+
+
+// COLOUR BLOCKS //
+
+.blue-block
+  background: $lightblue
+  height: 100%
   width: 100%
-  padding: 1em
+
+.pink-block
+  background: $pink
+  height: 100%
+  width: 100%
+
+.blue-block-small
+  .outer
+    height: 70%
+
+.pink
+  color: $pink
+
+.pink-bg
+  background: $pink
+  h1
+    color: $blue
+
+.blue-bg
+  background: $lightblue
+
+.white-bg
+  background: white
+
+
+
+.section
+  height: 100vh
+
+.sub-section
+  height: 100vh
+  overflow: hidden
+
+.section-colums
+  height: 100%
+
+.section-icon
+  display: block
+  width: 100%
+  text-align: center
   img
-    width: 90%
+    width: 7em
+
+.section-text
+  display: block
+  width: 100%
+  text-align: center
+
+  p
+    margin-bottom: 0
+
+  a
     margin: 0 auto
-    display: block
+    margin-top: 1em
+
+.section-description
+  padding: 1em
+
+.outer
+  display: table
+  position: absolute
+  height: 100%
+  width: 100%
+
+
+@media (max-width: 700px)
+  .outer
+    height: 85%
+
+  .blue-block-long
+    .outer
+      height: 100%
+
+.middle
+  display: table-cell
+  vertical-align: middle
+
+.inner
+  margin-left: auto
+  margin-right: auto
+
+
+@media (max-width: 700px)
+
+  .pink
+    h1
+      padding-top: 0.4em
+
+  .section-text
+    h2
+      margin-bottom: 0
+
+    .button
+      display: none
+
+  .section-feature-image.columns
+    width: 100%
+    margin-left: 0
+
+  .section-description
+    height: 30.3vh
+    padding: 0 1em
+    position: relative
+
+  .section-icon
+    vertical-align: top
+    padding-top: 1em
+    width: 15%
+    display: inline-block
+    text-align: center
+    img
+      width: 100%
+      max-width: 5em
+
+  .section-text
+    width: 80%
+    display: inline-block
+    padding: 0.7em
+    text-align: left
+    position: relative
+    p, h2
+      width: 95%
+
+    &:after
+      content: ">"
+      display: inline-block
+      position: absolute
+      top: 40%
+      right: 0
+      color: white
+
+@media (max-width: 550px)
+  .section-description
+    padding: 0

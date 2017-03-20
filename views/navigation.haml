@@ -1,0 +1,35 @@
+.navigation{ :role => "custom-dropdown"}
+  %input#button{:type => "checkbox"}/
+  %label{:for => "button", :onclick => ""}
+
+  .mobile-nav
+    %ul.nav
+      %a.mobile-nav-link{:href => "#secondPage"}
+        %li Our reel
+      %a.mobile-nav-link{:href => "#thirdPage"}
+        %li Who we are
+      %a.mobile-nav-link{:href => "#fourthPage"}
+        %li What we deliver
+      %a.mobile-nav-link{:href => "#sixthPage"}
+        %li Who we work with
+      %a.mobile-nav-link{:href => "#seventhPage"}
+        %li Get in touch
+
+
+  .desktop-nav
+    %ul.nav#nav1
+      %li
+        %a{:href => "#thirdPage"} Who we are
+      %li
+        %a{:href => "#fourthPage"} What we deliver
+
+    %ul.nav.navlogo
+      %li
+        %a{:href => "#secondPage"}
+          %img(src='/assets/img/CombinationMarkV1Dark.png')
+
+    %ul.nav#nav2
+      %li
+        %a{:href => "#sixthPage"} Who we work with
+      %li
+        %a{:href => "#seventhPage"} Get in touch
