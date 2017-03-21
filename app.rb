@@ -1,7 +1,6 @@
 # myapp.rb
 require 'sinatra'
 require 'sinatra/reloader' if development?
-require 'Haml'
 
 set :root, File.realpath(File.dirname(__FILE__))
 
