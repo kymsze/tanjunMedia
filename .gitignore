@@ -7,4 +7,4 @@
 /assets/img/
 
 .bundle/
-.DS_Store
+*/.DS_Store
