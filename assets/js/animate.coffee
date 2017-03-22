@@ -17,6 +17,7 @@ ScreenBigEnough = (width, height) ->
     true
 
 $(document).ready ->
+  $Video.get(0).play()
   $('.mobile-nav-link').click ->
     $('#button').prop('checked', false)
   return
@@ -104,6 +105,4 @@ if ScreenBigEnough $(window).width(), $(window).height()
         return
       return
 else
-    console.log("YOYOY")
-    $Video.get(0).play()
   return
