@@ -5,3 +5,6 @@
 /tmp/
 
 /assets/img/
+
+.bundle/
+.DS_Store
