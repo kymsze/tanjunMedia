@@ -7,6 +7,10 @@
     %link{href: '/assets/application.css', rel: "stylesheet"}/
 
   %body
+
+    /[if IE]
+      %link{href: '/assets/css/ie.css', rel: "stylesheet"}/
+
     #fullpage
 
       = haml :navigation
