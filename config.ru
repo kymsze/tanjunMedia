@@ -1,5 +1,5 @@
-require File.expand_path '../app', __FILE__
-require File.expand_path '../my_assets', __FILE__
+require_relative 'app'
+require_relative 'my_assets'
 
 unless ENV['RACK_ENV'] == 'production'
   map '/assets' do
