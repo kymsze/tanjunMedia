@@ -4,10 +4,10 @@
     %iframe{:allowfullscreen => "", :webkitallowfullscreen => "", :mozallowfullscreen => "", :frameborder => "0", :src => "https://player.vimeo.com/video/203277091"}
 
   %a.play-btn{"data-lity" => "", :href => "//vimeo.com/203277091"}
-    %p Play
+    %p Play!
 
   .overlay
-  %video#vid{:autobuffer => "", :autoplay => "", :video => "", :loop => ""}
-    %source#webm{:src => "/assets/img/hero.webm", :type => "video/mp4"}
-    %source#mp4{:src => "/assets/img/hero.mp4", :type => "video/mp4"}
-
+  %video#vid{:loop => "", :muted => "", :preload => "none", :playsinline => "", :poster => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.png"}
+    %source#mp4{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.mp4", :type => "video/mp4"}
+      %source#webm{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.webm",  :type => "video/webm"}
+        %source{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.ogv",      :type => "video/ogg"}
