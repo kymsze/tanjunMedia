@@ -2,9 +2,22 @@
   box-sizing: border-box
 
 .row
-  max-width: 1200px
+  max-width: 2000px
   margin: 0 auto
   padding: 0 4%
+
+
+@media (max-width: 2000px)
+  .row
+    max-width: 1600px
+    margin: 0 auto
+    padding: 0 4%
+
+@media (max-width: 1200px)
+  .row
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 4%
 
 .wide-row
   max-width: none
