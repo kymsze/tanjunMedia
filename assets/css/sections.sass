@@ -14,11 +14,12 @@
     margin-top: 4em
 
 .divider-flip
-  -webkit-transform: rotate(180deg)
-  -moz-transform: rotate(180deg)
-  -ms-transform: rotate(180deg)
-  -o-transform: rotate(180deg)
-  transform: rotate(180deg)
+  -moz-transform: scaleY(-1)
+  -o-transform: scaleY(-1)
+  -webkit-transform: scaleY(-1)
+  transform: scaleY(-1)
+  filter: FlipV
+  -ms-filter: "FlipV"
 
 .bolt-one-divider
   background: url("img/bolt1.png") no-repeat center
@@ -51,17 +52,32 @@
 
 .blue-block
   background: $lightblue
-  height: 100%
+  height: 77%
   width: 100%
+
 
 .pink-block
   background: $pink
   height: 100%
   width: 100%
 
-.blue-block-small
+.blue-block-head
   .outer
     height: 70%
+
+.blue-block-foot
+  .outer
+    height: 85%
+
+@media (max-width: 700px)
+
+  .blue-block
+    height: 100%
+
+  .blue-block-head,
+  .blue-block-foot
+    .outer
+      height: 100%
 
 .pink
   color: $pink
