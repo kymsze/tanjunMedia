@@ -34,6 +34,21 @@ p
   padding: 0.7em 0
   font-size: 1.4em
 
+b
+  font-family: 'BodyBold'
+
+.quote
+  font-family: 'Header'
+  color: white
+  font-size: 1.8em
+  padding: 1em 0
+
+.auth
+  font-family: 'BodyBold'
+  color: $pink
+  font-size: 1em
+  text-align: right
+
 .button
   font-size: 1.3em
   font-family: 'BodyBold'
@@ -41,6 +56,19 @@ p
 h2
   font-family: 'Header'
   font-size: 2em
+
+.highligh-blue
+  margin: 0.8em 0
+  padding: 0
+  b
+    color: $lightblue
+
+.highligh-pink
+  margin: 0.8em 0
+  padding: 0
+  b
+    color: $pink
+    padding-left: 1.5em
 
 .blue-block
   h2, p
@@ -54,10 +82,25 @@ h2
       font-size: 1.2em
       text-decoration: none
 
+.hero-header
+  p
+    font-family: 'Feature'
+    font-size: 7em
+    .sub
+      font-size: 0.6em
+
+
 .play-btn
   p
     font-family: 'Feature'
     font-size: 8em
+
+.sub
+  font-size: 0.8em
+  margin: 0
+  padding: 0.4em 0 0 0
+  font-family: 'BodyBold'
+  color: white
 
 @media (max-width: 1800px)
 
@@ -90,6 +133,9 @@ h2
     p
       font-size: 6em
 
+  .hero-header
+    p
+      font-size: 5em
 
 @media (max-width: 1300px)
 
@@ -97,7 +143,7 @@ h2
     font-size: 1.6em
 
   p
-    font-size: 1em
+    font-size: 0.95em
 
   .button
     font-size: 0.9em
@@ -114,19 +160,33 @@ h2
     p
       font-size: 5em
 
+  .hero-header
+    p
+      font-size: 3.3em
 @media (max-width: 700px)
 
   h1
     font-size: 1.8em
 
   p
-    font-size: 1em
+    font-size: 0.9em
+    margin-bottom: 0.3em
 
   .button
     font-size: 1em
 
   h2
     font-size: 1.4em
+
+  .hero-header
+    p
+      font-size: 2.7em
+
+  .highligh-pink,
+  .highligh-blue,
+    margin: 0.6em 0
+    b
+      padding-left: 0
 
 @media (max-width: 550px)
 
@@ -136,11 +196,12 @@ h2
   h2
     font-size: 1.3em
 
-  p
-    font-size: 1em
-
   .button
     font-size: 0.9em
+
+  .hero-header
+    p
+      font-size: 2em
 
 
 

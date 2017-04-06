@@ -1,0 +1,13 @@
+.section.section-large#secondPage
+
+  .lity-iframe-container.lity-hide
+    %iframe{:allowfullscreen => "", :webkitallowfullscreen => "", :mozallowfullscreen => "", :frameborder => "0", :src => "https://player.vimeo.com/video/203277091"}
+
+  %a.play-btn{"data-lity" => "", :href => "//vimeo.com/191177712"}
+    %p Play!
+
+  .overlay
+  %video#vid{:loop => "", :muted => "", :preload => "none", :playsinline => "", :poster => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.png"}
+    %source#mp4{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/big-and-bold/EVERY_YOUTUBER_CHALLENGE_EVER_-_KSI.mp4",      :type => "video/mp4"}
+      %source#webm{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/big-and-bold/EVERY_YOUTUBER_CHALLENGE_EVER_-_KSI.webm",  :type => "video/webm"}
+        %source{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/big-and-bold/EVERY_YOUTUBER_CHALLENGE_EVER_-_KSI.ogv",      :type => "video/ogg"}

@@ -14,12 +14,11 @@
     margin-top: 4em
 
 .divider-flip
-  -moz-transform: scaleY(-1)
-  -o-transform: scaleY(-1)
-  -webkit-transform: scaleY(-1)
-  transform: scaleY(-1)
-  filter: FlipV
-  -ms-filter: "FlipV"
+  -webkit-transform: rotate(180deg)
+  -moz-transform: rotate(180deg)
+  -ms-transform: rotate(180deg)
+  -o-transform: rotate(180deg)
+  transform: rotate(180deg)
 
 .bolt-one-divider
   background: url("img/bolt1.png") no-repeat center
@@ -68,6 +67,13 @@
 .blue-block-foot
   .outer
     height: 85%
+
+.blue-block-long
+  height: 100%
+  .outer
+    height: 100%
+    .middle
+      padding-top: 3em
 
 @media (max-width: 700px)
 
@@ -126,7 +132,7 @@
       max-width: 9em
       margin-bottom: 0
 
-@media (max-width: 1400px)
+@media (max-width: 1000px)
   .section-icon
     img
       max-width: 7em
@@ -159,10 +165,6 @@
 @media (max-width: 700px)
   .outer
     height: 85%
-
-  .blue-block-long
-    .outer
-      height: 100%
 
 .middle
   display: table-cell
@@ -213,6 +215,14 @@
     position: relative
     p, h2
       width: 95%
+
+    h2
+      height: 20%
+      margin-top: 1em
+
+    p
+      height: 70%
+      margin-top: 1em
 
     &:after
       content: ">"

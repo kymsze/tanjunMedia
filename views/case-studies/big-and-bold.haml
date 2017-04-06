@@ -11,14 +11,14 @@
     /[if IE]
       %link{href: '/assets/css/ie.css', rel: "stylesheet"}/
 
-    #fullpage1
+    #fullpage2
 
-      = haml :navigation
-      = haml :hero
-      = haml :reel
-      = haml :about
-      = haml :work
-      = haml :clients
+      = haml :back
+      = haml :"case-studies/header"
+      = haml :"case-studies/problem"
+      = haml :"case-studies/solution"
+      = haml :"case-studies/video"
+      = haml :"case-studies/result"
       = haml :contact
 
   %script{ src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js' }
