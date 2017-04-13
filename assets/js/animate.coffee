@@ -16,15 +16,13 @@ FullPageOne = ->
   $('#fullpage1').fullpage
       fixedElements: '.navigation, .hero-footer'
       anchors: [
-        'firstPage'
-        'secondPage'
-        'thirdPage'
-        'fourthPage'
-        'fithPage'
-        'sixthPage'
-        'seventhPage'
-        'eighthPage'
-        'ninthPage'
+        'Hero'
+        'ourReel'
+        'whoWeAre'
+        'whatWeCreate'
+        'whatWeCreateMore'
+        'whoWeWorkWith'
+        'getInTouch'
       ]
       onLeave: (index, nextIndex, direction) ->
 
@@ -98,21 +96,20 @@ FullPageTwo = ->
   $('#fullpage2').fullpage
       fixedElements: '.navigation'
       anchors: [
-        'firstPage'
-        'secondPage'
-        'thirdPage'
-        'fourthPage'
-        'fithPage'
-        'sixthPage'
-        'seventhPage'
-        'eighthPage'
-        'ninthPage'
+        'WorkHero'
+        'theProblem'
+        'theProblemOne'
+        'theSolution'
+        'theSolutionOne'
+        'theSolutionTwo'
+        'theResults'
+        'theResultsOne'
+        'getInTouch'
       ]
       onLeave: (index, nextIndex, direction) ->
 
 
       afterLoad: (anchorLink, index) ->
-
 
         if index == 6
           $PlayButton.addClass('animated tada')
@@ -135,8 +132,23 @@ ScreenBigEnough = (width, height) ->
   else
     true
 
+ActiveSection = (hash) ->
+  $('a').removeClass 'current'
+  if location.hash == "#whatWeCreateExt"
+    $(".extended").addClass 'current'
+  else
+    $('a[href*=\'' + location.hash + '\']').addClass 'current'
+  return
+
+
 
 $(document).ready ->
+
+  ActiveSection(location.hash)
+
+  window.addEventListener 'hashchange', ((event) ->
+    ActiveSection(location.hash)
+  ), false
 
   $Video.get(0).play()
   $('.mobile-nav-link').click ->

@@ -2,37 +2,44 @@
   %input#button{:type => "checkbox"}/
   %label{:for => "button", :onclick => ""}
 
-
-  / TODO create a nav for no JS to remove errors
-
   .mobile-nav
-    %ul.nav
-      %a.mobile-nav-link{:href => "#secondPage"}
-        %li Our reel
-      %a.mobile-nav-link{:href => "#thirdPage"}
-        %li Who we are
-      %a.mobile-nav-link{:href => "#fourthPage"}
-        %li What we deliver
-      %a.mobile-nav-link{:href => "#sixthPage"}
-        %li Who we work with
-      %a.mobile-nav-link{:href => "#seventhPage"}
-        %li Get in touch
+    .outer
+      .middle
+        .inner
+          %ul.nav
+            %a.mobile-nav-link{:href => "#ourReel"}
+              %li Our reel
+            %a.mobile-nav-link{:href => "#whoWeAre"}
+              %li Who we are
+            %a.mobile-nav-link{:href => "#whatWeCreate"}
+              %li.extended What we create
+            %a.mobile-nav-link{:href => "#whoWeWorkWith"}
+              %li Who we work with
+            %a.mobile-nav-link{:href => "#getInTouch"}
+              %li Get in touch
+            .mobile-nav-link
+              %li.social
+                %img{:src => "/assets/img/social/social1.png"}
+                %img{:src => "/assets/img/social/social2.png"}
+                %img{:src => "/assets/img/social/social3.png"}
+                %img{:src => "/assets/img/social/social4.png"}
+                %img{:src => "/assets/img/social/social5.png"}
 
 
   .desktop-nav
     %ul.nav#nav1
       %li
-        %a{:href => "#thirdPage"} Who we are
+        %a{:href => "#whoWeAre"} Who we are
       %li
-        %a{:href => "#fourthPage"} What we deliver
+        %a.extended{:href => "#whatWeCreate"} What we create
 
     %ul.nav.navlogo
       %li
-        %a{:href => "#secondPage"}
+        %a{:href => "#ourReel"}
           %img{:src => "/assets/img/CombinationMarkV1Pink.png"}
 
     %ul.nav#nav2
       %li
-        %a{:href => "#sixthPage"} Who we work with
+        %a{:href => "#whoWeWorkWith"} Who we work with
       %li
-        %a{:href => "#seventhPage"} Get in touch
+        %a{:href => "#getInTouch"} Get in touch

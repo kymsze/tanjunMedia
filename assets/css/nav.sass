@@ -4,6 +4,9 @@
 .mobile-nav
   display: none
 
+  .social
+    margin-top: 2em
+
 input[type=checkbox]
   position: absolute
   top: -9999px
@@ -32,6 +35,9 @@ label
     padding: 0.5em 1.5em
     a
       color: white
+
+    a.current
+      text-decoration: line-through
 
 .navlogo
   margin: 0
@@ -66,6 +72,13 @@ label
 
 @media screen and (max-width: 700px)
 
+  .secondary-navigation
+    li
+      padding-top: 0
+
+  .nav-back
+    width: 2.5em
+
   .navigation
     height: 3em
 
@@ -97,42 +110,43 @@ label
 
     input[type=checkbox]:checked ~
       label
-        background: white
+        background: $pink
       label:after
-        color: $pink
+        color: white
 
       .desktop-nav
         display: none
 
       .mobile-nav
         display: block
+        height: 100vh
+        background: $pink
+        position: relative
 
         ul
-          background: white
           display: block
           margin: 0
           max-width: 100%
           position: relative
 
-          > a
+          > .mobile-nav-link
             width: 100%
-            color: $pink
-            font-family: 'BodyBold'
-            font-size: 0.9em
+            color: white
+            font-family: 'Header'
+            font-size: 1.3em
             text-decoration: none
 
             > li
-              background: white
               width: 100%
-              text-align: left
+              text-align: center
               margin-bottom: 0
-              padding-top: 1em
-              padding-bottom: 1em
-              border-top: 1.5px solid
+              padding-top: 5%
+              padding-bottom: 5%
 
-          > a:last-of-type
-            li
-              border-bottom: 1em solid
+          > .mobile-nav-link.current
+            > li
+              color: $purple
+              text-decoration: line-through
 
 
 

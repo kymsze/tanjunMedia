@@ -1,4 +1,4 @@
-.section.section-large#secondPage
+.section.section-large#ourReel
 
   .lity-iframe-container.lity-hide
     %iframe{:allowfullscreen => "", :webkitallowfullscreen => "", :mozallowfullscreen => "", :frameborder => "0", :src => "https://player.vimeo.com/video/203277091"}
@@ -7,7 +7,7 @@
     %p Play!
 
   .overlay
-  %video#vid{:loop => "", :muted => "", :preload => "none", :playsinline => "", :poster => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.png"}
+  %video#vid{:loop => "", :muted => "", :preload => "none", :playsinline => ""}
     %source#mp4{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.mp4", :type => "video/mp4"}
       %source#webm{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.webm",  :type => "video/webm"}
         %source{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/hero.ogv",      :type => "video/ogg"}
