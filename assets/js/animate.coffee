@@ -109,37 +109,6 @@ $('#fullpage2').fullpage
       'ninthPage'
     ]
     onLeave: (index, nextIndex, direction) ->
-      if index == 1 and nextIndex == 2
-        typer('.typer-box')
-          .cursor({block: true})
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue(" Hey Tanjun", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" Hey guys", 50)
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue("   Can you communicate the message that over 1,300 British athletes are funded by The National Lottery, making them some of the best athletes in the world?", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" Yeah, no worries!", 50)
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue(" Yeah, BTW, can you communicate it to a completely new young audience that thinks The National Lottery was created in the early 18th centenary by some ‘old dudes’.", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" Ha! Young people hey, lol. Yep, no worries.", 50)
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue(" Also, can you raise awareness that as well as athletes, The National Lottery pretty much funds every cool thing ever, across the UK. In fact, can you also communicate the fact we have funded over 500k projects.", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" Right! Yeah, we’ll add that to the list.", 50)
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue(" Great, thank you!", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" You’re welcome", 50)
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue(" Oh, one other thing…", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" Yeah, sure, go for it!", 50)
-          .line("<span class='highligh-blue'><b>The National Lottery:</b></class>", 10)
-          .continue(" You’ll need to also generate over 2 million views and help shift the perception of the National Lottery to a more playful, confident and self-aware brand as well as driving significant engagement across our new social channels.", 50)
-          .line("<span class='highligh-pink'><b>Tanjun:</b></class>", 10)
-          .continue(" Errr, yep, we can do that!!!!! Nooooo problem!!!", 50)
 
 
     afterLoad: (anchorLink, index) ->

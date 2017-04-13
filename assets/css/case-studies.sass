@@ -1,50 +1,70 @@
 .result-block
-  padding-bottom: 25%
+  padding-top: 25%
   position: relative
   margin-left: 0
   width: 25%
   display: inline-table
   float: left
-  p
-    position: absolute
-    top: 25%
-    width: 100%
-
-  h5
-    position: absolute
-    top: 1em
-    width: 100%
 
 h1.blue
-  color: $blue
+  color: $pink
 
-.result-block.pink
-  background: $pink
+.result
+  position: absolute
+  top: 35%
+  width: 100%
+
   h5
-    color: $blue
+    margin: 0
+
   p
-    color: white
+    padding: 0
 
 .result-block.blue
-  background: $lightblue
-  h5
-    color: $blue
+  background: url("img/heart-blue.png") no-repeat bottom center
+  background-size: contain
+  h5,
   p
     color: white
 
 .result-block.white
-  h5
-    color: $blue
+  background: url("img/heart-pink.png") no-repeat bottom center
+  background-size: contain
+  h5,
   p
-    color: $pink
-
-@media (max-width: 1000px)
-  .result-block
-    p
-      top: 25%
+    color: white
 
 @media (max-width: 800px)
   .result-block
-    width: 50%
-    height: 30vh
+    width: 40%
+    padding-top: 36%
+    margin-left: 7%
+
+    .result
+      top: 30%
+
+@media (max-width: 410px)
+  .result-block
+    padding: 0
+    height: 20vh
+    width: 100%
+    margin-left: 0
+    margin-bottom: 1vh
+
+    .result
+      top: 25%
+
+  .result-block.white
+    background: url("img/heart-pink-wide.png") no-repeat bottom center
+    background-size: contain
+
+  .result-block.blue
+    background: url("img/heart-blue-wide.png") no-repeat bottom center
+    background-size: contain
+
+
+
+
+
+
 
