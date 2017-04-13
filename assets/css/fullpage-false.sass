@@ -8,10 +8,36 @@ html.fullpage-false
     overflow: scroll
     position: relative
 
-  #fullpage
+  #fullpage1,
+  #fullpage2
     height: auto
     overflow: scroll
     position: relative
+
+  .blue-block,
+  .pink-block
+
+    .row:first-of-type
+      padding-top: 4em
+
+    .row:last-of-type
+      padding-bottom: 4em
+
+  .blue-block.blue-block-head
+    position: relative
+
+    .ksi
+      position: absolute
+      top: 0
+
+
+  @media (max-width: 900px)
+    .blue-block.blue-block-head
+      .ksi
+        top: -15%
+
+  .outer
+    height: auto
 
   .section
     height: auto

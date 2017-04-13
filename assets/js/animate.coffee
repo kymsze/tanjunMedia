@@ -8,7 +8,7 @@ $PlayButton = $('.play-btn')
 
 
 
-# TODO slipt into three files
+# TODO split into three files
 
 
 FullPageOne = ->
@@ -94,34 +94,34 @@ FullPageOne = ->
 
 
 FullPageTwo = ->
-console.log("loaded two")
-$('#fullpage2').fullpage
-    fixedElements: '.navigation'
-    anchors: [
-      'firstPage'
-      'secondPage'
-      'thirdPage'
-      'fourthPage'
-      'fithPage'
-      'sixthPage'
-      'seventhPage'
-      'eighthPage'
-      'ninthPage'
-    ]
-    onLeave: (index, nextIndex, direction) ->
+  console.log("loaded two")
+  $('#fullpage2').fullpage
+      fixedElements: '.navigation'
+      anchors: [
+        'firstPage'
+        'secondPage'
+        'thirdPage'
+        'fourthPage'
+        'fithPage'
+        'sixthPage'
+        'seventhPage'
+        'eighthPage'
+        'ninthPage'
+      ]
+      onLeave: (index, nextIndex, direction) ->
 
 
-    afterLoad: (anchorLink, index) ->
+      afterLoad: (anchorLink, index) ->
 
 
-      if index == 6
-        $PlayButton.addClass('animated tada')
-        $Video.get(0).play()
+        if index == 6
+          $PlayButton.addClass('animated tada')
+          $Video.get(0).play()
 
-      if index != 6
-        $PlayButton.removeClass('animated tada')
+        if index != 6
+          $PlayButton.removeClass('animated tada')
 
-        return
+          return
 
 #  END TODO
 
