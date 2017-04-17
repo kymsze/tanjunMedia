@@ -2,7 +2,7 @@ ruby '2.2.4'
 
 source "https://rubygems.org"
 
-gem 'rack', '= 1.6.4'
+gem 'rack'
 gem 'sinatra'
 gem 'sinatra-reloader'
 gem 'thin'
