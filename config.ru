@@ -5,4 +5,6 @@ map '/assets' do
   run MyAssets.environment Sinatra::Application.settings.root
 end
 
+use Rack::Deflater
+
 run Sinatra::Application
