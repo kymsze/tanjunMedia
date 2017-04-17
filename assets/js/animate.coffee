@@ -12,7 +12,6 @@ $PlayButton = $('.play-btn')
 
 
 FullPageOne = ->
-  console.log("loaded one")
   $('#fullpage1').fullpage
       fixedElements: '.navigation, .hero-footer'
       anchors: [
@@ -92,7 +91,6 @@ FullPageOne = ->
 
 
 FullPageTwo = ->
-  console.log("loaded two")
   $('#fullpage2').fullpage
       fixedElements: '.navigation'
       anchors: [
@@ -159,10 +157,8 @@ $(document).ready ->
     $('.section').removeAttr('id');
 
     if $('#fullpage1').length
-      console.log("page1")
       FullPageOne()
     else if $('#fullpage2').length
-      console.log("page2")
       FullPageTwo()
 
   else

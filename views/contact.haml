@@ -23,10 +23,14 @@
             Email: hello@tanjunmedia.com
         .four.offset-by-four.columns
           .social
-            %img{:src => "/assets/img/social/social1.png"}
-            %img{:src => "/assets/img/social/social2.png"}
-            %img{:src => "/assets/img/social/social3.png"}
-            %img{:src => "/assets/img/social/social4.png"}
+            %a{:href => "mailto:hello@tanjunmedia.com"}
+              %img{:src => "/assets/img/social/social1.png"}
+            %a{:href => "https://www.facebook.com/tanjunmedia/", :target => "_blank"}
+              %img{:src => "/assets/img/social/social2.png"}
+            %a{:href => "https://www.instagram.com/tanjunmediauk/", :target => "_blank"}
+              %img{:src => "/assets/img/social/social3.png"}
+            %a{:href => "https://vimeo.com/tanjunmedia", :target => "_blank"}
+              %img{:src => "/assets/img/social/social4.png"}
           %p.right
             COMPANY NO: 10184325
       .row.footer-section
