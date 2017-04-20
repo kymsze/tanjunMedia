@@ -1,0 +1,143 @@
+.split-75-25
+  .highlight-blue
+    width: 75%
+  .highlight-pink
+    width: 25%
+
+.split-50-50
+  .highlight-blue
+    width: 50%
+  .highlight-pink
+    width: 44%
+    margin-left: 5%
+
+.highlight
+  display: inline-block
+  text-align: left
+  margin-bottom: 0
+
+  .chat
+    &:before
+      content: ''
+      width: 2em
+      height: 2em
+      display: inline-block
+
+.chat-block
+  margin-bottom: 1em
+
+.highlight-blue
+
+  vertical-align: top
+
+  .chat
+    color: $lightblue
+    font-family: 'BodyBold'
+
+    &:before
+      background: $lightblue
+  b
+    color: $lightblue
+    font-family: 'Header'
+    font-size: 1.2em
+
+
+.highlight-pink
+
+  vertical-align: bottom
+  margin-bottom: -1em
+
+  .chat
+    color: $pink
+    font-family: 'BodyBold'
+
+    &:before
+      background: $pink
+
+  b
+    color: $pink
+    font-family: 'Header'
+    font-size: 1.2em
+
+
+
+.triangle-border
+  position: relative
+  padding: 10px
+  border: 2px solid lightgrey
+  color: #333
+  background: #fff
+
+  /* css3
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  &.left
+    margin-left: 0
+  &.right
+    margin-right: 0
+  &:before
+    content: ""
+    position: absolute
+    bottom: -20px
+    /* value = - border-top-width - border-bottom-width
+    left: 40px
+    /* controls horizontal position
+    border-width: 20px 20px 0
+    border-style: solid
+    border-color: lightgrey transparent
+    /* reduce the damage in FF3.0
+    display: block
+    width: 0
+  &:after
+    content: ""
+    position: absolute
+    bottom: -13px
+    /* value = - border-top-width - border-bottom-width
+    left: 47px
+    /* value = (:before left) + (:before border-left) - (:after border-left)
+    border-width: 13px 13px 0
+    border-style: solid
+    border-color: #fff transparent
+    /* reduce the damage in FF3.0
+    display: block
+    width: 0
+  &.left
+    &:before
+      top: 15px
+      /* controls vertical position
+      bottom: auto
+      left: -30px
+      /* value = - border-left-width - border-right-width
+      border-width: 10px 30px 10px 0
+      border-color: transparent lightgrey
+    &:after
+      top: 17px
+      /* value = (:before top) + (:before border-top) - (:after border-top)
+      bottom: auto
+      left: -21px
+      /* value = - border-left-width - border-right-width
+      border-width: 8px 26px 10px 0
+      border-color: transparent #fff
+  &.right
+    &:before
+      top: 10px
+      /* controls vertical position
+      bottom: auto
+      left: auto
+      right: -30px
+      /* value = - border-left-width - border-right-width
+      border-width: 15px 0 15px 30px
+      border-color: transparent lightgrey
+    &:after
+      top: 16px
+      /* value = (:before top) + (:before border-top) - (:after border-top)
+      bottom: auto
+      left: auto
+      right: -21px
+      /* value = - border-left-width - border-right-width
+      border-width: 9px 0 9px 21px
+      border-color: transparent #fff
+
+
+
