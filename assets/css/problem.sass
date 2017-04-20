@@ -10,32 +10,45 @@
   .highlight-pink
     width: 44%
     margin-left: 5%
+  .single
+    margin-left: 56%
 
 .highlight
   display: inline-block
   text-align: left
   margin-bottom: 0
 
-  .chat
+  p
+    padding: 0
+    margin: 0
+
+  .brand
+    display: inline
     &:before
       content: ''
       width: 2em
       height: 2em
       display: inline-block
+      margin-right: 0.5em
+      vertical-align: text-bottom
+
+  .chat
+    margin-left: 2.5em
 
 .chat-block
-  margin-bottom: 1em
+  margin-bottom: 3em
 
 .highlight-blue
 
   vertical-align: top
 
-  .chat
+  .brand
     color: $lightblue
     font-family: 'BodyBold'
 
     &:before
-      background: $lightblue
+      background: url("img/case-studies/lotter-pixel.png")
+      background-size: 100%
   b
     color: $lightblue
     font-family: 'Header'
@@ -45,14 +58,15 @@
 .highlight-pink
 
   vertical-align: bottom
-  margin-bottom: -1em
+  margin-bottom: -5em
 
-  .chat
+  .brand
     color: $pink
     font-family: 'BodyBold'
 
     &:before
-      background: $pink
+      background: url("img/case-studies/tanjun-pixel.png")
+      background-size: 100%
 
   b
     color: $pink
@@ -64,9 +78,8 @@
 .triangle-border
   position: relative
   padding: 10px
-  border: 2px solid lightgrey
   color: #333
-  background: #fff
+  background: #F5f5f5
 
   /* css3
   -webkit-border-radius: 10px
@@ -89,19 +102,6 @@
     /* reduce the damage in FF3.0
     display: block
     width: 0
-  &:after
-    content: ""
-    position: absolute
-    bottom: -13px
-    /* value = - border-top-width - border-bottom-width
-    left: 47px
-    /* value = (:before left) + (:before border-left) - (:after border-left)
-    border-width: 13px 13px 0
-    border-style: solid
-    border-color: #fff transparent
-    /* reduce the damage in FF3.0
-    display: block
-    width: 0
   &.left
     &:before
       top: 15px
@@ -110,15 +110,7 @@
       left: -30px
       /* value = - border-left-width - border-right-width
       border-width: 10px 30px 10px 0
-      border-color: transparent lightgrey
-    &:after
-      top: 17px
-      /* value = (:before top) + (:before border-top) - (:after border-top)
-      bottom: auto
-      left: -21px
-      /* value = - border-left-width - border-right-width
-      border-width: 8px 26px 10px 0
-      border-color: transparent #fff
+      border-color: transparent #F5f5f5
   &.right
     &:before
       top: 10px
@@ -128,16 +120,7 @@
       right: -30px
       /* value = - border-left-width - border-right-width
       border-width: 15px 0 15px 30px
-      border-color: transparent lightgrey
-    &:after
-      top: 16px
-      /* value = (:before top) + (:before border-top) - (:after border-top)
-      bottom: auto
-      left: auto
-      right: -21px
-      /* value = - border-left-width - border-right-width
-      border-width: 9px 0 9px 21px
-      border-color: transparent #fff
+      border-color: transparent #F5f5f5
 
 
 
