@@ -5,6 +5,9 @@ $Nav1 = $('#nav1')
 $Nav2 = $('#nav2')
 $NavLogo = $('.navlogo')
 $PlayButton = $('.play-btn')
+$StatOne = $('.stat-one')
+$StatTwo = $('.stat-two')
+$StatThree = $('.stat-three')
 
 
 
@@ -106,8 +109,23 @@ FullPageTwo = ->
       ]
       onLeave: (index, nextIndex, direction) ->
 
-
       afterLoad: (anchorLink, index) ->
+
+        if index != 2
+          $StatOne.removeClass('animated zoomIn')
+          $StatTwo.removeClass('animated zoomIn')
+          $StatThree.removeClass('animated zoomIn')
+          $StatOne.addClass('animated fadeOut')
+          $StatTwo.addClass('animated fadeOut')
+          $StatThree.addClass('animated fadeOut')
+
+        if index == 2
+          $StatOne.removeClass('animated fadeOut')
+          $StatTwo.removeClass('animated fadeOut')
+          $StatThree.removeClass('animated fadeOut')
+          $StatOne.addClass('animated zoomIn').css('animation-delay', '0.50s')
+          $StatTwo.addClass('animated zoomIn').css('animation-delay', '1.50s')
+          $StatThree.addClass('animated zoomIn').css('animation-delay', '2.50s')
 
         if index == 6
           $PlayButton.addClass('animated tada')
