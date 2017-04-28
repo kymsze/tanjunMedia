@@ -5,9 +5,6 @@ $Nav1 = $('#nav1')
 $Nav2 = $('#nav2')
 $NavLogo = $('.navlogo')
 $PlayButton = $('.play-btn')
-$StatOne = $('.stat-one')
-$StatTwo = $('.stat-two')
-$StatThree = $('.stat-three')
 
 
 
@@ -76,11 +73,11 @@ FullPageOne = ->
 
         if index == 2
           $NavLogo.removeClass 'hidden'
-          $PlayButton.addClass('animated tada')
+          $PlayButton.addClass('animated tada infinite')
           $Video.get(0).play()
 
         if index != 2
-          $PlayButton.removeClass('animated tada')
+          $PlayButton.removeClass('animated tada infinite')
 
         if index != 1
           $NavLogo.removeClass 'hidden'
@@ -92,6 +89,27 @@ FullPageOne = ->
 
           return
 
+
+$ChatOneOne = $('.chat-1-1')
+$ChatOneTwo = $('.chat-1-2')
+$ChatOneThree = $('.chat-1-3')
+$ChatOneFour = $('.chat-1-4')
+$ChatOneFive = $('.chat-1-5')
+$ChatOneSix = $('.chat-1-6')
+$ChatOneSeven = $('.chat-1-7')
+
+$ChatTwoOne = $('.chat-2-1')
+$ChatTwoTwo = $('.chat-2-2')
+$ChatTwoThree = $('.chat-2-3')
+$ChatTwoFour = $('.chat-2-4')
+$ChatTwoFive = $('.chat-2-5')
+$ChatTwoSix = $('.chat-2-6')
+
+$ChatRight = $('.chat-right')
+$ChatLeft = $('.chat-left')
+$ChatRightTwo = $('.chat-right-2')
+$ChatLeftTwo = $('.chat-left-2')
+$ResultBlock = $('.result-block')
 
 FullPageTwo = ->
   $('#fullpage2').fullpage
@@ -108,24 +126,58 @@ FullPageTwo = ->
         'getInTouch'
       ]
       onLeave: (index, nextIndex, direction) ->
+        if index == 1 and nextIndex == 2
+          $ChatRight.addClass('bounceInRight')
+          $ChatLeft.addClass('bounceInLeft')
+          $ChatOneOne.addClass('animated').css('animation-delay', '0.05s')
+          $ChatOneTwo.addClass('animated').css('animation-delay', '0.50s')
+          $ChatOneThree.addClass('animated').css('animation-delay', '1.40s')
+          $ChatOneFour.addClass('animated').css('animation-delay', '2.30s')
+          $ChatOneFive.addClass('animated').css('animation-delay', '3.20s')
+          $ChatOneSix.addClass('animated').css('animation-delay', '4.10s')
+          $ChatOneSeven.addClass('animated').css('animation-delay', '5.0s')
+
+        if index == 2 and nextIndex == 3
+          $ChatRightTwo.addClass('bounceInRight')
+          $ChatLeftTwo.addClass('bounceInLeft')
+          $ChatTwoOne.addClass('animated').css('animation-delay', '0.05s')
+          $ChatTwoTwo.addClass('animated').css('animation-delay', '0.50s')
+          $ChatTwoThree.addClass('animated').css('animation-delay', '1.40s')
+          $ChatTwoFour.addClass('animated').css('animation-delay', '2.30s')
+          $ChatTwoFive.addClass('animated').css('animation-delay', '3.20s')
+
+        if index == 7 and nextIndex == 8
+          $ResultBlock.removeClass('animated zoomIn')
+          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
+
+
+        if index == 6 and nextIndex == 7
+          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
 
       afterLoad: (anchorLink, index) ->
 
-        if index != 2
-          $StatOne.removeClass('animated zoomIn')
-          $StatTwo.removeClass('animated zoomIn')
-          $StatThree.removeClass('animated zoomIn')
-          $StatOne.addClass('animated fadeOut')
-          $StatTwo.addClass('animated fadeOut')
-          $StatThree.addClass('animated fadeOut')
+        if index == 7
+          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
+          $ResultBlock.removeClass('animated zoomIn').css('animation-delay', '0.30s')
 
-        if index == 2
-          $StatOne.removeClass('animated fadeOut')
-          $StatTwo.removeClass('animated fadeOut')
-          $StatThree.removeClass('animated fadeOut')
-          $StatOne.addClass('animated zoomIn').css('animation-delay', '0.50s')
-          $StatTwo.addClass('animated zoomIn').css('animation-delay', '1.50s')
-          $StatThree.addClass('animated zoomIn').css('animation-delay', '2.50s')
+        if index == 8
+          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
+
+        # if index != 2
+        #   $StatOne.removeClass('animated zoomIn')
+        #   $StatTwo.removeClass('animated zoomIn')
+        #   $StatThree.removeClass('animated zoomIn')
+        #   $StatOne.addClass('animated fadeOut')
+        #   $StatTwo.addClass('animated fadeOut')
+        #   $StatThree.addClass('animated fadeOut')
+
+        # if index == 2
+        #   $StatOne.removeClass('animated fadeOut')
+        #   $StatTwo.removeClass('animated fadeOut')
+        #   $StatThree.removeClass('animated fadeOut')
+        #   $StatOne.addClass('animated zoomIn').css('animation-delay', '0.50s')
+        #   $StatTwo.addClass('animated zoomIn').css('animation-delay', '1.50s')
+        #   $StatThree.addClass('animated zoomIn').css('animation-delay', '2.50s')
 
         if index == 6
           $PlayButton.addClass('animated tada')

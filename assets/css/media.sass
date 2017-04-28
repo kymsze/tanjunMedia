@@ -3,12 +3,18 @@
   height: 0
   overflow: hidden
   max-width: 100%
+  border: 7px solid $blue
+  background: black
 
 .short
-  padding-bottom: 88%
+  padding-bottom: 85%
 
 .long
-  padding-bottom: 100%
+  padding-bottom: 96%
+
+.mobile
+  width: 65%
+  padding-bottom: 112%
 
 .embed-container iframe,
 .embed-container object,
@@ -28,6 +34,10 @@
 
   .quick-stretch
     width: initial
+
+.image-long
+  width: 94%
+  margin-left: 5%
 
 .sub-section-desktop
   display: block
@@ -54,6 +64,12 @@
     max-height: 100%
     width: initial
 
+@media (max-width: 1100px)
+
+  .mobile
+    width: 79%
+    padding-bottom: 135%
+
 @media (max-width: 900px)
   .sub-section-desktop
     display: none
@@ -68,6 +84,10 @@
       img
         bottom: 15%
         top: inherit
+
+  .mobile
+    width: 87%
+    padding-bottom: 148%
 
 @media (max-width: 700px)
   .media-mobile

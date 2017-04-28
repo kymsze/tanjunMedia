@@ -81,9 +81,15 @@ html, body
 
 .header-image
   background-size: cover
-  background-position: right center
+  background-position: center
   width: 100%
   height: 100vh
+
+.header-image-right
+  background-position: right center
+
+.header-image-left
+  background-position: left center
 
 .desktop-header
   padding-top: 6em
@@ -108,6 +114,7 @@ html, body
     color: white
 
 .hero-header
+  padding: 0 20%
   position: absolute
   width: 100%
   top: 35vh
@@ -116,8 +123,28 @@ html, body
   text-decoration: none
   p
     color: $pink
+    text-shadow: 2px 2px $blue
   .sub
     color: white
     float: right
     padding: 0 10%
     text-align: right
+    text-shadow: 2px 2px $blue
+
+
+@media (max-width: 1250px)
+
+  .hero-header
+    padding: 0 17%
+
+
+@media (max-width: 940px)
+
+  .hero-header
+    padding: 0 13%
+
+
+@media (max-width: 835px)
+
+  .hero-header
+    padding: 0

@@ -71,8 +71,15 @@
       background-size: 100%
   b
     color: $lightblue
-    font-family: 'Header'
-    font-size: 1.2em
+
+.chat
+  b
+    font-family: 'Feature'
+    padding: 0 0.3em
+    font-size: 0.7em
+
+.problem
+  position: absolute
 
 
 .highlight-pink
@@ -90,8 +97,50 @@
 
   b
     color: $pink
-    font-family: 'Header'
-    font-size: 1.2em
+
+.highlight-pink.raised
+  margin-bottom: -2em
+
+@media (max-width: 800px)
+
+
+  .split-75-25,
+  .split-50-50,
+  .split-40-60,
+  .split-60-40
+    .highlight
+      width: 100%
+      margin: 0.3em 0
+      padding: 5px
+
+    .chat-block
+      margin: 0
+
+@media (max-width: 550px)
+
+  .highlight
+    .brand
+      &:before
+        width: 0
+        height: 0
+        margin-right: 0
+
+    .chat
+      margin-left: 0
+      display: inline
+
+
+  .split-75-25,
+  .split-50-50,
+  .split-40-60,
+  .split-60-40
+    .highlight
+      width: 100%
+      margin: 0.5em 0
+      padding: 7px
+
+    .chat-block
+      margin: 0
 
 
 
@@ -100,6 +149,7 @@
   padding: 10px
   color: #333
   background: #F5f5f5
+  // box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15)
 
   /* css3
   -webkit-border-radius: 10px
@@ -124,7 +174,7 @@
     width: 0
   &.left
     &:before
-      top: 15px
+      top: 10px
       /* controls vertical position
       bottom: auto
       left: -30px
@@ -139,7 +189,7 @@
       left: auto
       right: -30px
       /* value = - border-left-width - border-right-width
-      border-width: 15px 0 15px 30px
+      border-width: 10px 0 10px 30px
       border-color: transparent #F5f5f5
 
 
