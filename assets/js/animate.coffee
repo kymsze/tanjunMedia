@@ -6,23 +6,34 @@ $Nav2 = $('#nav2')
 $NavLogo = $('.navlogo')
 $PlayButton = $('.play-btn')
 
+$ChatOneOne = $('.chat-1-1')
+$ChatOneTwo = $('.chat-1-2')
+$ChatOneThree = $('.chat-1-3')
+$ChatOneFour = $('.chat-1-4')
+$ChatOneFive = $('.chat-1-5')
+$ChatOneSix = $('.chat-1-6')
+$ChatOneSeven = $('.chat-1-7')
+
+$ChatTwoOne = $('.chat-2-1')
+$ChatTwoTwo = $('.chat-2-2')
+$ChatTwoThree = $('.chat-2-3')
+$ChatTwoFour = $('.chat-2-4')
+$ChatTwoFive = $('.chat-2-5')
+$ChatTwoSix = $('.chat-2-6')
+
+$ChatRight = $('.chat-right')
+$ChatLeft = $('.chat-left')
+$ChatRightTwo = $('.chat-right-2')
+$ChatLeftTwo = $('.chat-left-2')
+$ResultBlock = $('.result-block')
 
 
 # TODO split into three files
 
-
-FullPageOne = ->
-  $('#fullpage1').fullpage
+HomePage = ->
+  $('#home-page').fullpage
       fixedElements: '.navigation, .hero-footer'
-      anchors: [
-        'Hero'
-        'ourReel'
-        'whoWeAre'
-        'whatWeCreate'
-        'whatWeCreateMore'
-        'whoWeWorkWith'
-        'getInTouch'
-      ]
+      anchors: ['Hero', 'ourReel', 'whoWeAre', 'whatWeCreate', 'whatWeCreateMore', 'whoWeWorkWith', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
 
         # Fade footer
@@ -73,11 +84,11 @@ FullPageOne = ->
 
         if index == 2
           $NavLogo.removeClass 'hidden'
-          $PlayButton.addClass('animated tada infinite')
+          $PlayButton.addClass('animated tada')
           $Video.get(0).play()
 
         if index != 2
-          $PlayButton.removeClass('animated tada infinite')
+          $PlayButton.removeClass('animated tada')
 
         if index != 1
           $NavLogo.removeClass 'hidden'
@@ -90,103 +101,149 @@ FullPageOne = ->
           return
 
 
-$ChatOneOne = $('.chat-1-1')
-$ChatOneTwo = $('.chat-1-2')
-$ChatOneThree = $('.chat-1-3')
-$ChatOneFour = $('.chat-1-4')
-$ChatOneFive = $('.chat-1-5')
-$ChatOneSix = $('.chat-1-6')
-$ChatOneSeven = $('.chat-1-7')
+AnimateProblemOne = () ->
+  $ChatRight.addClass('bounceInRight')
+  $ChatLeft.addClass('bounceInLeft')
+  $ChatOneOne.addClass('animated').css('animation-delay', '0.05s')
+  $ChatOneTwo.addClass('animated').css('animation-delay', '0.50s')
+  $ChatOneThree.addClass('animated').css('animation-delay', '1.40s')
+  $ChatOneFour.addClass('animated').css('animation-delay', '2.30s')
+  $ChatOneFive.addClass('animated').css('animation-delay', '3.20s')
+  $ChatOneSix.addClass('animated').css('animation-delay', '4.10s')
+  $ChatOneSeven.addClass('animated').css('animation-delay', '5.0s')
 
-$ChatTwoOne = $('.chat-2-1')
-$ChatTwoTwo = $('.chat-2-2')
-$ChatTwoThree = $('.chat-2-3')
-$ChatTwoFour = $('.chat-2-4')
-$ChatTwoFive = $('.chat-2-5')
-$ChatTwoSix = $('.chat-2-6')
+AnimateProblemTwo = () ->
+  $ChatRightTwo.addClass('bounceInRight')
+  $ChatLeftTwo.addClass('bounceInLeft')
+  $ChatTwoOne.addClass('animated').css('animation-delay', '0.05s')
+  $ChatTwoTwo.addClass('animated').css('animation-delay', '0.50s')
+  $ChatTwoThree.addClass('animated').css('animation-delay', '1.40s')
+  $ChatTwoFour.addClass('animated').css('animation-delay', '2.30s')
+  $ChatTwoFive.addClass('animated').css('animation-delay', '3.20s')
 
-$ChatRight = $('.chat-right')
-$ChatLeft = $('.chat-left')
-$ChatRightTwo = $('.chat-right-2')
-$ChatLeftTwo = $('.chat-left-2')
-$ResultBlock = $('.result-block')
+AnimateResults = () ->
+  $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
 
-FullPageTwo = ->
-  $('#fullpage2').fullpage
+AnimatePlayButton = () ->
+  $PlayButton.addClass('animated tada')
+  $Video.get(0).play()
+
+RemoveAnimatePlayButton = () ->
+  $PlayButton.removeClass('animated tada')
+
+BigAndBold = ->
+  $('#big-and-bold').fullpage
       fixedElements: '.navigation'
-      anchors: [
-        'WorkHero'
-        'theProblem'
-        'theProblemOne'
-        'theSolution'
-        'theSolutionOne'
-        'theSolutionTwo'
-        'theResults'
-        'theResultsOne'
-        'getInTouch'
-      ]
+      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
-          $ChatRight.addClass('bounceInRight')
-          $ChatLeft.addClass('bounceInLeft')
-          $ChatOneOne.addClass('animated').css('animation-delay', '0.05s')
-          $ChatOneTwo.addClass('animated').css('animation-delay', '0.50s')
-          $ChatOneThree.addClass('animated').css('animation-delay', '1.40s')
-          $ChatOneFour.addClass('animated').css('animation-delay', '2.30s')
-          $ChatOneFive.addClass('animated').css('animation-delay', '3.20s')
-          $ChatOneSix.addClass('animated').css('animation-delay', '4.10s')
-          $ChatOneSeven.addClass('animated').css('animation-delay', '5.0s')
-
+          AnimateProblemOne()
         if index == 2 and nextIndex == 3
-          $ChatRightTwo.addClass('bounceInRight')
-          $ChatLeftTwo.addClass('bounceInLeft')
-          $ChatTwoOne.addClass('animated').css('animation-delay', '0.05s')
-          $ChatTwoTwo.addClass('animated').css('animation-delay', '0.50s')
-          $ChatTwoThree.addClass('animated').css('animation-delay', '1.40s')
-          $ChatTwoFour.addClass('animated').css('animation-delay', '2.30s')
-          $ChatTwoFive.addClass('animated').css('animation-delay', '3.20s')
-
+          AnimateProblemTwo()
         if index == 7 and nextIndex == 8
-          $ResultBlock.removeClass('animated zoomIn')
-          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
-
-
-        if index == 6 and nextIndex == 7
-          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
+          AnimateResults()
 
       afterLoad: (anchorLink, index) ->
-
         if index == 7
-          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
-          $ResultBlock.removeClass('animated zoomIn').css('animation-delay', '0.30s')
+          AnimatePlayButton()
 
-        if index == 8
-          $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
+        if index != 7
+          RemoveAnimatePlayButton()
 
-        # if index != 2
-        #   $StatOne.removeClass('animated zoomIn')
-        #   $StatTwo.removeClass('animated zoomIn')
-        #   $StatThree.removeClass('animated zoomIn')
-        #   $StatOne.addClass('animated fadeOut')
-        #   $StatTwo.addClass('animated fadeOut')
-        #   $StatThree.addClass('animated fadeOut')
+Campaigns = ->
+  $('#campaigns').fullpage
+      fixedElements: '.navigation'
+      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      onLeave: (index, nextIndex, direction) ->
+        if index == 1 and nextIndex == 2
+          AnimateProblemOne()
+        if index == 2 and nextIndex == 3
+          AnimateProblemTwo()
+        if index == 6 and nextIndex == 7
+          AnimateResults()
 
-        # if index == 2
-        #   $StatOne.removeClass('animated fadeOut')
-        #   $StatTwo.removeClass('animated fadeOut')
-        #   $StatThree.removeClass('animated fadeOut')
-        #   $StatOne.addClass('animated zoomIn').css('animation-delay', '0.50s')
-        #   $StatTwo.addClass('animated zoomIn').css('animation-delay', '1.50s')
-        #   $StatThree.addClass('animated zoomIn').css('animation-delay', '2.50s')
-
+      afterLoad: (anchorLink, index) ->
         if index == 6
-          $PlayButton.addClass('animated tada')
-          $Video.get(0).play()
+          AnimatePlayButton()
 
         if index != 6
-          $PlayButton.removeClass('animated tada')
+          RemoveAnimatePlayButton()
 
-          return
+DigitalInfluencer = ->
+  $('#digital-influencer').fullpage
+      fixedElements: '.navigation'
+      anchors: [ 'WorkHero', 'theProblemOne', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      onLeave: (index, nextIndex, direction) ->
+        if index == 1 and nextIndex == 2
+          AnimateProblemOne()
+        if index == 2 and nextIndex == 3
+          AnimateProblemTwo()
+        if index == 6 and nextIndex == 7
+          AnimateResults()
+
+      afterLoad: (anchorLink, index) ->
+        if index == 6
+          AnimatePlayButton()
+
+        if index != 6
+          RemoveAnimatePlayButton()
+
+DigitalStrategy = ->
+  $('#digital-strategy').fullpage
+      fixedElements: '.navigation'
+      anchors: [ 'WorkHero', 'theProblemOne', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      onLeave: (index, nextIndex, direction) ->
+        if index == 1 and nextIndex == 2
+          AnimateProblemOne()
+        if index == 2 and nextIndex == 3
+          AnimateProblemTwo()
+        if index == 6 and nextIndex == 7
+          AnimateResults()
+
+      afterLoad: (anchorLink, index) ->
+        if index == 6
+          AnimatePlayButton()
+
+        if index != 6
+          RemoveAnimatePlayButton()
+
+ShortForm = ->
+  $('#short-form').fullpage
+      fixedElements: '.navigation'
+      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      onLeave: (index, nextIndex, direction) ->
+        if index == 1 and nextIndex == 2
+          AnimateProblemOne()
+        if index == 2 and nextIndex == 3
+          AnimateProblemTwo()
+        if index == 6 and nextIndex == 7
+          AnimateResults()
+
+      afterLoad: (anchorLink, index) ->
+        if index == 6
+          AnimatePlayButton()
+
+        if index != 6
+          RemoveAnimatePlayButton()
+
+SmallAndNimble = ->
+  $('#small-and-nimble').fullpage
+      fixedElements: '.navigation'
+      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      onLeave: (index, nextIndex, direction) ->
+        if index == 1 and nextIndex == 2
+          AnimateProblemOne()
+        if index == 2 and nextIndex == 3
+          AnimateProblemTwo()
+        if index == 6 and nextIndex == 7
+          AnimateResults()
+
+      afterLoad: (anchorLink, index) ->
+        if index == 6
+          AnimatePlayButton()
+
+        if index != 6
+          RemoveAnimatePlayButton()
 
 #  END TODO
 
@@ -226,10 +283,20 @@ $(document).ready ->
     $('html').removeClass('fullpage-false')
     $('.section').removeAttr('id');
 
-    if $('#fullpage1').length
-      FullPageOne()
-    else if $('#fullpage2').length
-      FullPageTwo()
+    if $('#home-page').length
+      HomePage()
+    else if $('#big-and-bold').length
+      BigAndBold()
+    else if $('#campaigns').length
+      Campaigns()
+    else if $('#digital-influencer').length
+      DigitalInfluencer()
+    else if $('#digital-strategy').length
+      DigitalStrategy()
+    else if $('#short-form').length
+      ShortForm()
+    else if $('#small-and-nimble').length
+      SmallAndNimble()
 
   else
     return
