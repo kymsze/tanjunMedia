@@ -265,7 +265,11 @@ ActiveSection = (hash) ->
     $('a[href*=\'' + location.hash + '\']').addClass 'current'
   return
 
-
+resize = ->
+  if window.innerHeight != height
+    height = window.innerHeight
+    $('.section').css 'height', height + 'px'
+  return
 
 $(document).ready ->
 
@@ -282,6 +286,8 @@ $(document).ready ->
   if ScreenBigEnough $(window).width(), $(window).height()
     $('html').removeClass('fullpage-false')
     $('.section').removeAttr('id');
+    $('.nav-no-js').addClass('hidden')
+    $('.nav-js').removeClass('hidden')
 
     if $('#home-page').length
       HomePage()
@@ -298,5 +304,18 @@ $(document).ready ->
     else if $('#small-and-nimble').length
       SmallAndNimble()
 
+    height = window.innerHeight
+    a = setInterval((->
+      $(window).scrollTop -1
+      resize()
+      return
+    ), 500)
+    # Don't lower more than 500ms, otherwise there will be animation-problems with the  Safari toolbar
+    $(window).on 'resize', ->
+      resize()
+      return
+
   else
+    $('.nav-js').addClass('hidden')
+    $('.nav-no-js').removeClass('hidden')
     return

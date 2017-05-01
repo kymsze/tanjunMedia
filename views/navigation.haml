@@ -1,4 +1,4 @@
-.navigation{ :role => "custom-dropdown"}
+.navigation.nav-js{ :role => "custom-dropdown"}
   %input#button{:type => "checkbox"}/
   %label{:for => "button", :onclick => ""}
 
@@ -25,8 +25,10 @@
                   %img{:src => "/assets/img/social/social2.png"}
                 %a{:href => "https://www.instagram.com/tanjunmediauk/", :target => "_blank"}
                   %img{:src => "/assets/img/social/social3.png"}
-                %a{:href => "https://vimeo.com/tanjunmedia", :target => "_blank"}
+                %a{:href => "https://twitter.com/tanjunmedia", :target => "_blank"}
                   %img{:src => "/assets/img/social/social4.png"}
+                %a{:href => "https://vimeo.com/tanjunmedia", :target => "_blank"}
+                  %img{:src => "/assets/img/social/social5.png"}
 
 
   .desktop-nav
@@ -46,3 +48,53 @@
         %a{:href => "#whoWeWorkWith"} Who we work with
       %li
         %a{:href => "#getInTouch"} Get in touch
+
+
+.navigation.nav-no-js{ :role => "custom-dropdown"}
+  %input#button{:type => "checkbox"}/
+  %label{:for => "button", :onclick => ""}
+
+  .mobile-nav
+    .outer
+      .middle
+        .inner
+          %ul.nav
+            %a.mobile-nav-link{:href => "#ourReelNav"}
+              %li Our reel
+            %a.mobile-nav-link{:href => "#whoWeAreNav"}
+              %li Who we are
+            %a.mobile-nav-link{:href => "#whatWeCreateNav"}
+              %li.extended What we create
+            %a.mobile-nav-link{:href => "#whoWeWorkWithNav"}
+              %li Who we work with
+            %a.mobile-nav-link{:href => "#getInTouchNav"}
+              %li Get in touch
+            .mobile-nav-link
+              %li.social
+                %a{:href => "mailto:hello@tanjunmedia.com"}
+                  %img{:src => "/assets/img/social/social1.png"}
+                %a{:href => "https://www.facebook.com/tanjunmedia/", :target => "_blank"}
+                  %img{:src => "/assets/img/social/social2.png"}
+                %a{:href => "https://www.instagram.com/tanjunmediauk/", :target => "_blank"}
+                  %img{:src => "/assets/img/social/social3.png"}
+                %a{:href => "https://vimeo.com/tanjunmedia", :target => "_blank"}
+                  %img{:src => "/assets/img/social/social4.png"}
+
+
+  .desktop-nav
+    %ul.nav#nav1
+      %li
+        %a{:href => "#whoWeAreNav"} Who we are
+      %li
+        %a.extended{:href => "#whatWeCreateNav"} What we create
+
+    %ul.nav.navlogo
+      %li
+        %a{:href => "#ourReelNav"}
+          %img{:src => "/assets/img/CombinationMarkV1Pink.png"}
+
+    %ul.nav#nav2
+      %li
+        %a{:href => "#whoWeWorkWithNav"} Who we work with
+      %li
+        %a{:href => "#getInTouchNav"} Get in touch
