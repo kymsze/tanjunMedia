@@ -137,6 +137,8 @@ RemoveAnimatePlayButton = () ->
 BigAndBold = ->
   $('#big-and-bold').fullpage
       fixedElements: '.navigation'
+      navigation: true
+      navigationPosition: 'right'
       anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
@@ -156,6 +158,8 @@ BigAndBold = ->
 Campaigns = ->
   $('#campaigns').fullpage
       fixedElements: '.navigation'
+      navigation: true
+      navigationPosition: 'right'
       anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
@@ -175,6 +179,8 @@ Campaigns = ->
 DigitalInfluencer = ->
   $('#digital-influencer').fullpage
       fixedElements: '.navigation'
+      navigation: true
+      navigationPosition: 'right'
       anchors: [ 'WorkHero', 'theProblemOne', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
@@ -194,6 +200,8 @@ DigitalInfluencer = ->
 DigitalStrategy = ->
   $('#digital-strategy').fullpage
       fixedElements: '.navigation'
+      navigation: true
+      navigationPosition: 'right'
       anchors: [ 'WorkHero', 'theProblemOne', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
@@ -214,6 +222,8 @@ ShortForm = ->
   $('#short-form').fullpage
       fixedElements: '.navigation'
       anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'getInTouch']
+      navigation: true
+      navigationPosition: 'right'
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
           AnimateProblemOne()
@@ -223,6 +233,8 @@ ShortForm = ->
 SmallAndNimble = ->
   $('#small-and-nimble').fullpage
       fixedElements: '.navigation'
+      navigation: true
+      navigationPosition: 'right'
       anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
