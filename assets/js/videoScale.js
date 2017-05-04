@@ -1,6 +1,8 @@
 jQuery(document).ready(function() {
-  scaleVideo();
-  $('video#vid').on("loadedmetadata", scaleVideo);
+  if($('video#vid').length) {
+    scaleVideo();
+    $('video#vid').on("loadedmetadata", scaleVideo);
+  }
 
   function scaleVideo(){
 

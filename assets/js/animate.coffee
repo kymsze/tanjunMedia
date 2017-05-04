@@ -20,6 +20,7 @@ $ChatTwoThree = $('.chat-2-3')
 $ChatTwoFour = $('.chat-2-4')
 $ChatTwoFive = $('.chat-2-5')
 $ChatTwoSix = $('.chat-2-6')
+$ChatTwoSeven = $('.chat-2-7')
 
 $ChatRight = $('.chat-right')
 $ChatLeft = $('.chat-left')
@@ -120,6 +121,8 @@ AnimateProblemTwo = () ->
   $ChatTwoThree.addClass('animated').css('animation-delay', '1.40s')
   $ChatTwoFour.addClass('animated').css('animation-delay', '2.30s')
   $ChatTwoFive.addClass('animated').css('animation-delay', '3.20s')
+  $ChatTwoSix.addClass('animated').css('animation-delay', '4.10s')
+  $ChatTwoSeven.addClass('animated').css('animation-delay', '5.0s')
 
 AnimateResults = () ->
   $ResultBlock.addClass('animated zoomIn').css('animation-delay', '0.30s')
@@ -210,21 +213,12 @@ DigitalStrategy = ->
 ShortForm = ->
   $('#short-form').fullpage
       fixedElements: '.navigation'
-      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
           AnimateProblemOne()
         if index == 2 and nextIndex == 3
           AnimateProblemTwo()
-        if index == 6 and nextIndex == 7
-          AnimateResults()
-
-      afterLoad: (anchorLink, index) ->
-        if index == 6
-          AnimatePlayButton()
-
-        if index != 6
-          RemoveAnimatePlayButton()
 
 SmallAndNimble = ->
   $('#small-and-nimble').fullpage
@@ -279,9 +273,11 @@ $(document).ready ->
     ActiveSection(location.hash)
   ), false
 
-  $Video.get(0).play()
-  $('.mobile-nav-link').click ->
-    $('#button').prop('checked', false)
+  if $Video.length
+    console.log("video")
+    $Video.get(0).play()
+    $('.mobile-nav-link').click ->
+      $('#button').prop('checked', false)
 
   if ScreenBigEnough $(window).width(), $(window).height()
     $('html').removeClass('fullpage-false')

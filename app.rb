@@ -12,7 +12,7 @@ get '/' do
   haml :index
 end
 
-get '/our-work/:name' do
+get '/work/:name' do
   begin
     haml :"case-studies/#{params['name']}"
   rescue Errno::ENOENT

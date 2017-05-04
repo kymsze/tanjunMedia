@@ -104,3 +104,113 @@
       .columns
         width: 100%
 
+.slider
+  .background-image
+    height: 100%
+    width: 100%
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+  .image-arron
+    background-image: url(img/case-studies/short-form/ARRON-HARMONY.png)
+  .image-max-headstand
+    background-image: url(img/case-studies/short-form/MAXS-MAGIC-HANDSTAND.png)
+  .image-max-body-paint
+    background-image: url(img/case-studies/short-form/BODY-PAINT-MAX.png)
+  .image-max-3d
+    background-image: url(img/case-studies/short-form/MAX-3D.png)
+  .image-body-paint-high-jump
+    background-image: url(img/case-studies/short-form/BODYPAINT-HIGH-JUMP.png)
+  .image-mini-mad-max
+    background-image: url(img/case-studies/short-form/MINI-MAD-MAX.png)
+  .image-body-paint-rowers
+    background-image: url(img/case-studies/short-form/BODYPAINT-ROWERS.png)
+  .image-prep-camp
+    background-image: url(img/case-studies/short-form/MONTAGE-PREP-CAMP.png)
+  .image-dantdm-betsy
+    background-image: url(img/case-studies/short-form/DANTDM-BETSY.png)
+  .image-nectar
+    background-image: url(img/case-studies/short-form/nectar-offer.png)
+  .image-dantdm-leif
+    background-image: url(img/case-studies/short-form/DANTDM-LEIF.png)
+  .image-spoken-word
+    background-image: url(img/case-studies/short-form/spoken-word-sofa-win.png)
+  .image-dantdm-siam
+    background-image: url(img/case-studies/short-form/DANTDM-SIAM.png)
+  .image-tri
+    background-image: url(img/case-studies/short-form/tri-in-30-sec.png)
+  .image-dive
+    background-image: url(img/case-studies/short-form/DIVE.png)
+
+  .image-wrap
+    position: relative
+    border: 1px solid white
+    height: 50vh
+
+  .large-column
+    .image-wrap
+      height: 100vh
+
+  .small-overlay
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transform: none
+    min-width: initial
+    min-height: initial
+    opacity: 0
+    background: $lightblue
+
+  .columns
+    line-height: 0
+    margin-left: 0
+    width: 25%
+
+  .large-column
+    margin: 0
+    width: 50%
+
+  .small-overlay:hover
+    opacity: 0.8
+
+  .clickable-area
+    width: 100%
+    height: 100%
+    cursor: pointer
+    display: table
+
+  a
+    h1
+      display: table-cell
+      vertical-align: middle
+      color: white
+      font-family: 'Feature'
+      text-align: center
+      padding: 0 7%
+
+@media (max-width: 900px)
+  .slider
+    h1
+      font-size: 1em
+
+    .large-column
+      .image-wrap
+        height: 66vh
+
+    .image-wrap
+      height: 33vh
+
+    .columns
+      width: 50%
+
+    .large-column
+      width: 50%
+
+    .image-flatten
+      width: 100%
+      .image-wrap
+        width: 50%
+        display: inline-block
+        float: left
