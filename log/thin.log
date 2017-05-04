@@ -1,0 +1,7 @@
+Writing PID to tmp/pids/thin.pid
+Using rack adapter
+Thin web server (v1.7.0 codename Dunder Mifflin)
+Maximum connections set to 1024
+Listening on 0.0.0.0:3000, CTRL+C to stop
+127.0.0.1 - - [04/May/2017:18:14:02 +0100] "GET / HTTP/1.1" 200 - 0.2338
+Exiting!
