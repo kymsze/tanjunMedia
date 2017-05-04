@@ -222,8 +222,6 @@ ShortForm = ->
   $('#short-form').fullpage
       fixedElements: '.navigation'
       anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'getInTouch']
-      navigation: true
-      navigationPosition: 'right'
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
           AnimateProblemOne()
