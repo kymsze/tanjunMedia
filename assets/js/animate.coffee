@@ -34,7 +34,7 @@ $ResultBlock = $('.result-block')
 HomePage = ->
   $('#home-page').fullpage
       fixedElements: '.navigation, .hero-footer'
-      anchors: ['Hero', 'ourReel', 'whoWeAre', 'whatWeCreate', 'whatWeCreateMore', 'whoWeWorkWith', 'getInTouch']
+      anchors: ['Hero', 'ourReel', 'whoWeAre', 'whatWeCreate', 'whatWeCreateMore', 'whoWeWorkWith', 'meetTheTeam', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
 
         # Fade footer
@@ -249,6 +249,12 @@ SmallAndNimble = ->
         if index != 6
           RemoveAnimatePlayButton()
 
+MeetTheTeam = ->
+  $('#meet-the-team').fullpage
+      fixedElements: '.navigation'
+      navigation: true
+      navigationPosition: 'right'
+      anchors: [ 'whoWeAreNot', 'WhoWeAreNotTwo', 'Hiring', 'whoWeAre:)']
 #  END TODO
 
 ScreenBigEnough = (width, height) ->
@@ -309,6 +315,8 @@ $(document).ready ->
       ShortForm()
     else if $('#small-and-nimble').length
       SmallAndNimble()
+    else if $('#meet-the-team').length
+      MeetTheTeam()
 
     height = window.innerHeight
     a = setInterval((->

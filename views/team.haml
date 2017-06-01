@@ -1,0 +1,32 @@
+.section#theTeamNav
+  .sub-section
+    = haml :'work-sections/bolt', :locals => { :header => true, :text => "The Team" }
+
+    .blue-block.blue-block-head-foot
+      .outer
+        .middle
+          .inner
+            .row
+              .ten.columns
+                %p
+                  We are
+                  %b.text-highlight digital film content creators
+                  We are not a PR agency, nor are we ex TV broadcasters.
+
+                %p
+                  We are
+                  %b.text-highlight digital natives
+                  We live and breathe social content.
+
+                %p
+                  We aren't
+                  %b.text-highlight motivated
+                  by profit margins, industry awards or owning swanky Shoreditch offices, we just want to make great stuff and
+                  %b.text-highlight tell great stories
+                  and we would love to help tell yours.
+
+              .twelve.columns
+                %a.button.button-center.button-center-short{:href => "/meet-the-team"}
+                  Meet the team
+
+    = haml :'work-sections/bolt', :locals => { :header => false }

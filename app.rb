@@ -20,6 +20,15 @@ get '/work/:name' do
   end
 end
 
+get '/meet-the-team' do
+  begin
+    haml :"meet-the-team"
+  rescue Errno::ENOENT
+    haml :'404'
+  end
+end
+
+
 not_found do
   haml :'404'
 end
