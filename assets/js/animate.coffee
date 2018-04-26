@@ -160,20 +160,18 @@ Campaigns = ->
       fixedElements: '.navigation'
       navigation: true
       navigationPosition: 'right'
-      anchors: [ 'WorkHero', 'theProblemOne', 'theProblemTwo', 'theSolutionOne', 'theSolutionTwo', 'theResultsOne', 'theResultsTwo', 'getInTouch']
+      anchors: [ 'WorkHero', 'theProblemOne', 'theSolutionOne', 'theSolutionTwo', 'theSolutionThree', 'theSolutionFour', 'theSolutionFive', 'theResultsOne', 'theResultsTwo', 'getInTouch']
       onLeave: (index, nextIndex, direction) ->
         if index == 1 and nextIndex == 2
           AnimateProblemOne()
-        if index == 2 and nextIndex == 3
-          AnimateProblemTwo()
-        if index == 6 and nextIndex == 7
+        if index == 8 and nextIndex == 9
           AnimateResults()
 
       afterLoad: (anchorLink, index) ->
-        if index == 6
+        if index == 8
           AnimatePlayButton()
 
-        if index != 6
+        if index != 8
           RemoveAnimatePlayButton()
 
 DigitalInfluencer = ->

@@ -1,0 +1,13 @@
+.section.section-large
+
+  .lity-iframe-container.lity-hide
+    %iframe{:allowfullscreen => "", :webkitallowfullscreen => "", :mozallowfullscreen => "", :frameborder => "0", :src => "https://player.vimeo.com/video/203277091"}
+
+  %a.play-btn{"data-lity" => "", :href => "//vimeo.com/180070293"}
+    %p Play!
+
+  .overlay
+  %video#vid{:loop => "", :muted => "", :preload => "none", :playsinline => "", :poster => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/campaigns/hero.jpg"}
+    %source#mp4{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/campaigns/reel.mp4",      :type => "video/mp4"}
+      %source#webm{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/campaigns/reel.webm",  :type => "video/webm"}
+        %source{:src => "https://s3.eu-west-2.amazonaws.com/tanjun/case-studies/campaigns/reel.ogv",      :type => "video/ogg"}
